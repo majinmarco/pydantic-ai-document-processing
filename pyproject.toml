@@ -1,0 +1,36 @@
+[project]
+name = "pydantic-ai-document-processing"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Marco Nardone Guerra", email = "m.nardoneguerra@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=1.5.9",
+    "datasets>=5.1.0",
+    "ipykernel>=7.4.0",
+    "logfire>=5.4.0",
+    "markitdown>=0.1.9",
+    "pdfplumber>=0.11.10",
+    "pillow>=13.0.0",
+    "pip>=26.2.2",
+    "pydantic>=2.14.1",
+    "pydantic-ai>=2.62.0",
+    "pymupdf>=2.0",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+pydantic-ai-document-processing = "pydantic_ai_document_processing:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pyright]
+extraPaths = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,14 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.env
+
+# Virtual environments
+.venv
+data/
+src/pydantic_ai_document_processing/notebooks/company-document-dataset-v2-all.parquet/
+chroma.db/
