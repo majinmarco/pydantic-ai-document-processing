@@ -1,0 +1,2881 @@
+# yaml-language-server: $schema=extraction-shipping_order_schema.json
+name: extraction-shipping_order
+cases:
+- name: shipping_order/0bdab244b34fc02f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/0bdab244b34fc02f.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO022767
+    issue_date: '2017-10-02'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Rancho grande
+        address:
+          line1: Av. del Libertador 900
+          line2: null
+          city: Buenos Aires
+          region: null
+          postal_code: '1010'
+          country: Argentina
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: United Package
+        address: null
+        phone: (503) 555-3199
+        email: null
+        website: null
+        tax_id: null
+        code: '2'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2017-10-02'
+      deliver_by: '2017-09-30'
+      end_date: null
+    refs:
+      order_id: '22767'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '012'
+      description: Queso Manchego La Pastora
+      quantity: '3'
+      unit_price: '34.96'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 - 500 g pkgs.
+      line_total: '104.88'
+      extra:
+        category: Dairy Products
+    - sku: '024'
+      description: Guaraná Fantástica
+      quantity: '49'
+      unit_price: '4.14'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 355 ml cans
+      line_total: '202.86'
+      extra:
+        category: Beverages
+    - sku: '064'
+      description: Wimmers gute Semmelknödel
+      quantity: '18'
+      unit_price: '30.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 20 bags x 4 pieces
+      line_total: '550.62'
+      extra:
+        category: Grains/Cereals
+    summary:
+    - label: packages
+      value: 6
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '858.36'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Port dû
+      fmt: text
+      strong: false
+    - label: freight
+      value: '157.32'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/07a46ddace12f02b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/07a46ddace12f02b.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: AC-EXP-58432
+    issue_date: '2024-10-28'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Sarah Lee
+        address:
+          line1: 6490 Haviland Place
+          line2: null
+          city: La Jolla
+          region: CA
+          postal_code: '92806'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2024-10-28'
+      deliver_by: '2024-11-02'
+      end_date: null
+    refs:
+      order_id: SO58432
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TI-M602
+      description: ML Mountain Tire
+      quantity: '1'
+      unit_price: '23.69'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '23.69'
+      extra:
+        category: Tires and Tubes
+    - sku: PK-7098
+      description: Patch Kit/8 Patches
+      quantity: '1'
+      unit_price: '1.81'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1.81'
+      extra:
+        category: Tires and Tubes
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: freight_terms
+      value: Collect
+      fmt: text
+      strong: false
+    - label: freight
+      value: '0.64'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/7d6f9c36a692e568
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/7d6f9c36a692e568.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: AC-EXP-67854
+    issue_date: '2025-03-14'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Pedro Dominguez
+        address:
+          line1: 4594 Hill Drive
+          line2: null
+          city: Burien
+          region: WA
+          postal_code: '98168'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2025-03-14'
+      deliver_by: '2025-03-19'
+      end_date: null
+    refs:
+      order_id: SO67854
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TT-R982
+      description: Road Tire Tube
+      quantity: '1'
+      unit_price: '3.15'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.15'
+      extra:
+        category: Tires and Tubes
+    - sku: PK-7098
+      description: Patch Kit/8 Patches
+      quantity: '1'
+      unit_price: '1.81'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1.81'
+      extra:
+        category: Tires and Tubes
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '4.96'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Prepaid
+      fmt: text
+      strong: false
+    - label: freight
+      value: '0.13'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/afd2721958fa0bce
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/afd2721958fa0bce.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SHP0072260
+    issue_date: '2025-05-11'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Mason Carter
+        address:
+          line1: 1660 Bonifacio St.
+          line2: null
+          city: Bellingham
+          region: WA
+          postal_code: '98225'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2025-05-11'
+      deliver_by: '2025-05-16'
+      end_date: null
+    refs:
+      order_id: SO72260
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R19B-48
+      description: Road-750 Black, 48
+      quantity: '1'
+      unit_price: '426.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '426.59'
+      extra:
+        category: Road Bikes
+        weight: '9.131'
+        line_weight: '9.13'
+    - sku: SO-R809-L
+      description: Racing Socks, L
+      quantity: '1'
+      unit_price: '7.10'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '7.10'
+      extra:
+        category: Socks
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 9.13 kg
+      fmt: text
+      strong: false
+    - label: freight_terms
+      value: Collect
+      fmt: text
+      strong: false
+    - label: freight
+      value: '10.84'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/f13331deb26161a1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/f13331deb26161a1.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SHP0057423
+    issue_date: '2024-10-09'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Austin Lal
+        address:
+          line1: 9214 Birch Park Rd
+          line2: null
+          city: Bellflower
+          region: CA
+          postal_code: '90706'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2024-10-09'
+      deliver_by: '2024-10-14'
+      end_date: null
+    refs:
+      order_id: SO57423
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R19B-52
+      description: Road-750 Black, 52
+      quantity: '1'
+      unit_price: '426.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '426.59'
+      extra:
+        category: Road Bikes
+        weight: '9.262'
+        line_weight: '9.26'
+    - sku: BC-R205
+      description: Road Bottle Cage
+      quantity: '1'
+      unit_price: '7.10'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '7.10'
+      extra:
+        category: Bottles and Cages
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Bottles and Cages
+    - sku: VE-C304-M
+      description: Classic Vest, M
+      quantity: '1'
+      unit_price: '50.17'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '50.17'
+      extra:
+        category: Vests
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 9.26 kg
+      fmt: text
+      strong: false
+    - label: declared_value
+      value: '487.80'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Prepaid
+      fmt: text
+      strong: false
+    - label: freight
+      value: '12.20'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/232ac1bd1093f221
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/232ac1bd1093f221.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: AC-EXP-66928
+    issue_date: '2025-03-01'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Keith Chander
+        address:
+          line1: 5465 Janin Pl.
+          line2: null
+          city: Warrnambool
+          region: VIC
+          postal_code: '3280'
+          country: Australia
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2025-03-01'
+      deliver_by: '2025-03-06'
+      end_date: null
+    refs:
+      order_id: SO66928
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R19B-48
+      description: Road-750 Black, 48
+      quantity: '1'
+      unit_price: '426.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '426.59'
+      extra:
+        category: Road Bikes
+        weight: '9.131'
+        line_weight: '9.13'
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 9.13 kg
+      fmt: text
+      strong: false
+    - label: freight_terms
+      value: Prepaid
+      fmt: text
+      strong: false
+    - label: freight
+      value: '10.67'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/fea5bb2a244cdee1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/fea5bb2a244cdee1.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO012859
+    issue_date: '2013-11-07'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Toms Spezialitäten
+        address:
+          line1: Luisenstr. 48
+          line2: null
+          city: Münster
+          region: null
+          postal_code: '44087'
+          country: Germany
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: United Package
+        address: null
+        phone: (503) 555-3199
+        email: null
+        website: null
+        tax_id: null
+        code: '2'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2013-11-07'
+      deliver_by: '2013-12-02'
+      end_date: null
+    refs:
+      order_id: '12859'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: 008
+      description: Northwoods Cranberry Sauce
+      quantity: '20'
+      unit_price: '36.80'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 12 oz jars
+      line_total: '736.00'
+      extra:
+        category: Condiments
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '5'
+      unit_price: '40.39'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 100 - 100 g pieces
+      line_total: '201.95'
+      extra:
+        category: Confections
+    - sku: 049
+      description: Maxilaku
+      quantity: '43'
+      unit_price: '18.40'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 50 g pkgs.
+      line_total: '791.20'
+      extra:
+        category: Confections
+    - sku: '065'
+      description: Louisiana Fiery Hot Pepper Sauce
+      quantity: '31'
+      unit_price: '19.37'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 32 - 8 oz bottles
+      line_total: '600.47'
+      extra:
+        category: Condiments
+    summary:
+    - label: packages
+      value: 17
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '2329.62'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Port payé
+      fmt: text
+      strong: false
+    - label: freight
+      value: '31.97'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/fd25b2018cf6d670
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/fd25b2018cf6d670.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: AC-EXP-70018
+    issue_date: '2025-04-12'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Gabriella James
+        address:
+          line1: 5886 Book Rd
+          line2: null
+          city: Billericay
+          region: null
+          postal_code: CM11
+          country: United Kingdom
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2025-04-12'
+      deliver_by: '2025-04-17'
+      end_date: null
+    refs:
+      order_id: SO70018
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R79Y-44
+      description: Road-350-W Yellow, 44
+      quantity: '1'
+      unit_price: '1343.78'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1343.78'
+      extra:
+        category: Road Bikes
+        weight: '7.316'
+        line_weight: '7.32'
+    - sku: BC-R205
+      description: Road Bottle Cage
+      quantity: '1'
+      unit_price: '7.10'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '7.10'
+      extra:
+        category: Bottles and Cages
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 7.32 kg
+      fmt: text
+      strong: false
+    - label: declared_value
+      value: '1350.88'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Collect
+      fmt: text
+      strong: false
+    - label: freight
+      value: '33.77'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/930690ba0730d8cc
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/930690ba0730d8cc.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO016242
+    issue_date: '2016-04-24'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Toms Spezialitäten
+        address:
+          line1: Luisenstr. 48
+          line2: null
+          city: Münster
+          region: null
+          postal_code: '44087'
+          country: Germany
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: United Package
+        address: null
+        phone: (503) 555-3199
+        email: null
+        website: null
+        tax_id: null
+        code: '2'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2016-04-24'
+      deliver_by: '2016-05-11'
+      end_date: null
+    refs:
+      order_id: '16242'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '011'
+      description: Queso Cabrales
+      quantity: '29'
+      unit_price: '19.32'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 1 kg pkg.
+      line_total: '560.28'
+      extra:
+        category: Dairy Products
+    - sku: '014'
+      description: Tofu
+      quantity: '21'
+      unit_price: '21.39'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 40 - 100 g pkgs.
+      line_total: '449.19'
+      extra:
+        category: Produce
+    - sku: '061'
+      description: Sirop d'érable
+      quantity: '34'
+      unit_price: '26.22'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 500 ml bottles
+      line_total: '891.48'
+      extra:
+        category: Condiments
+    summary:
+    - label: packages
+      value: 2
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '1900.95'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Port payé
+      fmt: text
+      strong: false
+    - label: freight
+      value: '28.52'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/a401ac2a3630b506
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/a401ac2a3630b506.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO025779
+    issue_date: '2017-10-10'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Wolski Zajazd
+        address:
+          line1: ul. Filtrowa 68
+          line2: null
+          city: Warszawa
+          region: null
+          postal_code: 01-012
+          country: Poland
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Speedy Express
+        address: null
+        phone: (503) 555-9831
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2017-10-10'
+      deliver_by: '2017-10-25'
+      end_date: null
+    refs:
+      order_id: '25779'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '2'
+      unit_price: '40.39'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 100 - 100 g pieces
+      line_total: '80.78'
+      extra:
+        category: Confections
+    - sku: '031'
+      description: Gorgonzola Telino
+      quantity: '47'
+      unit_price: '11.50'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 100 g pkgs
+      line_total: '540.50'
+      extra:
+        category: Dairy Products
+    - sku: '072'
+      description: Mozzarella di Giovanni
+      quantity: '14'
+      unit_price: '32.02'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 200 g pkgs.
+      line_total: '448.28'
+      extra:
+        category: Dairy Products
+    summary:
+    - label: packages
+      value: 2
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '1069.56'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Port dû
+      fmt: text
+      strong: false
+    - label: freight
+      value: '401.81'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/eb555104bb715f64
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/eb555104bb715f64.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO011270
+    issue_date: '2013-05-07'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: La maison d-Asie
+        address:
+          line1: 1 rue Alsace-Lorraine
+          line2: null
+          city: Toulouse
+          region: null
+          postal_code: '31000'
+          country: France
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Speedy Express
+        address: null
+        phone: (503) 555-9831
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2013-05-07'
+      deliver_by: '2013-06-16'
+      end_date: null
+    refs:
+      order_id: '11270'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: 018
+      description: Carnarvon Tigers
+      quantity: '34'
+      unit_price: '57.50'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 16 kg pkg.
+      line_total: '1955.00'
+      extra:
+        category: Seafood
+    - sku: '020'
+      description: Sir Rodney's Marmalade
+      quantity: '40'
+      unit_price: '74.52'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 30 gift boxes
+      line_total: '2980.80'
+      extra:
+        category: Confections
+    - sku: '025'
+      description: NuNuCa Nuß-Nougat-Creme
+      quantity: '33'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 20 - 450 g glasses
+      line_total: '425.04'
+      extra:
+        category: Confections
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '34'
+      unit_price: '40.39'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 100 - 100 g pieces
+      line_total: '1373.26'
+      extra:
+        category: Confections
+    - sku: '042'
+      description: Singaporean Hokkien Fried Mee
+      quantity: '21'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 32 - 1 kg pkgs.
+      line_total: '270.48'
+      extra:
+        category: Grains/Cereals
+    - sku: '043'
+      description: Ipoh Coffee
+      quantity: '16'
+      unit_price: '42.32'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 16 - 500 g tins
+      line_total: '677.12'
+      extra:
+        category: Beverages
+    - sku: '046'
+      description: Spegesild
+      quantity: '9'
+      unit_price: '11.04'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 4 - 450 g glasses
+      line_total: '99.36'
+      extra:
+        category: Seafood
+    - sku: '054'
+      description: Tourtière
+      quantity: '26'
+      unit_price: '6.85'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 16 pies
+      line_total: '178.10'
+      extra:
+        category: Meat/Poultry
+    - sku: '073'
+      description: Röd Kaviar
+      quantity: '20'
+      unit_price: '13.80'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 150 g jars
+      line_total: '276.00'
+      extra:
+        category: Seafood
+    summary:
+    - label: packages
+      value: 10
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '8235.16'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Port payé
+      fmt: text
+      strong: false
+    - label: freight
+      value: '62.79'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/eb7c968b7efefb0e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/eb7c968b7efefb0e.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SHP0058061
+    issue_date: '2024-10-21'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Cameron Moore
+        address:
+          line1: 5551 Silverado Dr.
+          line2: null
+          city: Tacoma
+          region: WA
+          postal_code: '98403'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2024-10-21'
+      deliver_by: '2024-10-26'
+      end_date: null
+    refs:
+      order_id: SO58061
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-M68S-46
+      description: Mountain-200 Silver, 46
+      quantity: '1'
+      unit_price: '1832.79'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1832.79'
+      extra:
+        category: Mountain Bikes
+        weight: '10.945'
+        line_weight: '10.94'
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Bottles and Cages
+    - sku: BC-M005
+      description: Mountain Bottle Cage
+      quantity: '1'
+      unit_price: '7.89'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '7.89'
+      extra:
+        category: Bottles and Cages
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 10.94 kg
+      fmt: text
+      strong: false
+    - label: freight_terms
+      value: Collect
+      fmt: text
+      strong: false
+    - label: freight
+      value: '46.11'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/6b7942975b79d2a3
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/6b7942975b79d2a3.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO014252
+    issue_date: '2023-03-05'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Godos Cocina Típica
+        address:
+          line1: C/ Romero, 33
+          line2: null
+          city: Sevilla
+          region: null
+          postal_code: '41101'
+          country: Spain
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Federal Shipping
+        address: null
+        phone: (503) 555-9931
+        email: null
+        website: null
+        tax_id: null
+        code: '3'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2023-03-05'
+      deliver_by: '2023-04-05'
+      end_date: null
+    refs:
+      order_id: '14252'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '056'
+      description: Gnocchi di nonna Alice
+      quantity: '50'
+      unit_price: '34.96'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 250 g pkgs.
+      line_total: '1748.00'
+      extra:
+        category: Grains/Cereals
+    - sku: '060'
+      description: Camembert Pierrot
+      quantity: '17'
+      unit_price: '31.28'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 15 - 300 g rounds
+      line_total: '531.76'
+      extra:
+        category: Dairy Products
+    - sku: '061'
+      description: Sirop d'érable
+      quantity: '46'
+      unit_price: '26.22'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 500 ml bottles
+      line_total: '1206.12'
+      extra:
+        category: Condiments
+    summary:
+    - label: packages
+      value: 10
+      fmt: int
+      strong: false
+    - label: freight_terms
+      value: Port dû
+      fmt: text
+      strong: false
+    - label: freight
+      value: '473.11'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/f8c2b82e58c1e848
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/f8c2b82e58c1e848.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO021158
+    issue_date: '2022-02-10'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Santé Gourmet
+        address:
+          line1: Erling Skakkes gate 78
+          line2: null
+          city: Stavern
+          region: null
+          postal_code: '4110'
+          country: Norway
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: United Package
+        address: null
+        phone: (503) 555-3199
+        email: null
+        website: null
+        tax_id: null
+        code: '2'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2022-02-10'
+      deliver_by: '2022-02-15'
+      end_date: null
+    refs:
+      order_id: '21158'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '001'
+      description: Chai
+      quantity: '6'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 boxes x 20 bags
+      line_total: '99.36'
+      extra:
+        category: Beverages
+    - sku: '002'
+      description: Chang
+      quantity: '45'
+      unit_price: '17.48'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '786.60'
+      extra:
+        category: Beverages
+    - sku: '007'
+      description: Uncle Bob's Organic Dried Pears
+      quantity: '34'
+      unit_price: '27.60'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 1 lb pkgs.
+      line_total: '938.40'
+      extra:
+        category: Produce
+    - sku: 009
+      description: Mishi Kobe Niku
+      quantity: '49'
+      unit_price: '89.24'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 18 - 500 g pkgs.
+      line_total: '4372.76'
+      extra:
+        category: Meat/Poultry
+    - sku: '012'
+      description: Queso Manchego La Pastora
+      quantity: '26'
+      unit_price: '34.96'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 - 500 g pkgs.
+      line_total: '908.96'
+      extra:
+        category: Dairy Products
+    - sku: '014'
+      description: Tofu
+      quantity: '14'
+      unit_price: '21.39'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 40 - 100 g pkgs.
+      line_total: '299.46'
+      extra:
+        category: Produce
+    - sku: 019
+      description: Teatime Chocolate Biscuits
+      quantity: '18'
+      unit_price: '8.46'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 boxes x 12 pieces
+      line_total: '152.28'
+      extra:
+        category: Confections
+    - sku: '021'
+      description: Sir Rodney's Scones
+      quantity: '7'
+      unit_price: '9.20'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 pkgs. x 4 pieces
+      line_total: '64.40'
+      extra:
+        category: Confections
+    - sku: '023'
+      description: Tunnbröd
+      quantity: '7'
+      unit_price: '8.28'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 250 g pkgs.
+      line_total: '57.96'
+      extra:
+        category: Grains/Cereals
+    - sku: '036'
+      description: Inlagd Sill
+      quantity: '31'
+      unit_price: '17.48'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 250 g jars
+      line_total: '541.88'
+      extra:
+        category: Seafood
+    - sku: '037'
+      description: Gravad lax
+      quantity: '29'
+      unit_price: '23.92'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 500 g pkgs.
+      line_total: '693.68'
+      extra:
+        category: Seafood
+    - sku: 038
+      description: Côte de Blaye
+      quantity: '41'
+      unit_price: '242.42'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 75 cl bottles
+      line_total: '9939.22'
+      extra:
+        category: Beverages
+    - sku: '046'
+      description: Spegesild
+      quantity: '23'
+      unit_price: '11.04'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 4 - 450 g glasses
+      line_total: '253.92'
+      extra:
+        category: Seafood
+    - sku: '053'
+      description: Perth Pasties
+      quantity: '3'
+      unit_price: '30.18'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 48 pieces
+      line_total: '90.54'
+      extra:
+        category: Meat/Poultry
+    - sku: '055'
+      description: Pâté chinois
+      quantity: '20'
+      unit_price: '22.08'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 boxes x 2 pies
+      line_total: '441.60'
+      extra:
+        category: Meat/Poultry
+    - sku: '056'
+      description: Gnocchi di nonna Alice
+      quantity: '27'
+      unit_price: '34.96'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 250 g pkgs.
+      line_total: '943.92'
+      extra:
+        category: Grains/Cereals
+    - sku: 059
+      description: Raclette Courdavault
+      quantity: '5'
+      unit_price: '50.60'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 5 kg pkg.
+      line_total: '253.00'
+      extra:
+        category: Dairy Products
+    - sku: '072'
+      description: Mozzarella di Giovanni
+      quantity: '17'
+      unit_price: '32.02'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 200 g pkgs.
+      line_total: '544.34'
+      extra:
+        category: Dairy Products
+    - sku: '074'
+      description: Longlife Tofu
+      quantity: '43'
+      unit_price: '9.20'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 5 kg pkg.
+      line_total: '395.60'
+      extra:
+        category: Produce
+    - sku: '077'
+      description: Original Frankfurter grüne Soße
+      quantity: '7'
+      unit_price: '11.96'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 boxes
+      line_total: '83.72'
+      extra:
+        category: Condiments
+    summary:
+    - label: packages
+      value: 19
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '21861.60'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Port dû
+      fmt: text
+      strong: false
+    - label: freight
+      value: '298.54'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/fb8b488bafce8659
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/fb8b488bafce8659.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SHP0062565
+    issue_date: '2024-12-27'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Casey Alonso
+        address:
+          line1: 5366 Terry Lynn Lane
+          line2: null
+          city: North Ryde
+          region: NSW
+          postal_code: '2113'
+          country: Australia
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2024-12-27'
+      deliver_by: '2025-01-01'
+      end_date: null
+    refs:
+      order_id: SO62565
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R79Y-42
+      description: Road-350-W Yellow, 42
+      quantity: '1'
+      unit_price: '1343.78'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1343.78'
+      extra:
+        category: Road Bikes
+        weight: '7.153'
+        line_weight: '7.15'
+    - sku: TI-R628
+      description: ML Road Tire
+      quantity: '1'
+      unit_price: '19.74'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '19.74'
+      extra:
+        category: Tires and Tubes
+    - sku: TT-R982
+      description: Road Tire Tube
+      quantity: '1'
+      unit_price: '3.15'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.15'
+      extra:
+        category: Tires and Tubes
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 7.15 kg
+      fmt: text
+      strong: false
+    - label: declared_value
+      value: '1366.67'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Prepaid
+      fmt: text
+      strong: false
+    - label: freight
+      value: '34.17'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/b12d7375ee0368a8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/b12d7375ee0368a8.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO021567
+    issue_date: '2014-01-16'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Lehmanns Marktstand
+        address:
+          line1: Magazinweg 7
+          line2: null
+          city: Frankfurt a.M.
+          region: null
+          postal_code: '60528'
+          country: Germany
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Federal Shipping
+        address: null
+        phone: (503) 555-9931
+        email: null
+        website: null
+        tax_id: null
+        code: '3'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2014-01-16'
+      deliver_by: '2014-01-17'
+      end_date: null
+    refs:
+      order_id: '21567'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '021'
+      description: Sir Rodney's Scones
+      quantity: '45'
+      unit_price: '9.20'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 pkgs. x 4 pieces
+      line_total: '414.00'
+      extra:
+        category: Confections
+    - sku: '032'
+      description: Mascarpone Fabioli
+      quantity: '38'
+      unit_price: '29.44'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 200 g pkgs.
+      line_total: '1118.72'
+      extra:
+        category: Dairy Products
+    - sku: '042'
+      description: Singaporean Hokkien Fried Mee
+      quantity: '14'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 32 - 1 kg pkgs.
+      line_total: '180.32'
+      extra:
+        category: Grains/Cereals
+    - sku: '064'
+      description: Wimmers gute Semmelknödel
+      quantity: '43'
+      unit_price: '30.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 20 bags x 4 pieces
+      line_total: '1315.37'
+      extra:
+        category: Grains/Cereals
+    - sku: '071'
+      description: Flotemysost
+      quantity: '23'
+      unit_price: '19.78'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 - 500 g pkgs.
+      line_total: '454.94'
+      extra:
+        category: Dairy Products
+    summary:
+    - label: packages
+      value: 14
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '3483.35'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Port dû
+      fmt: text
+      strong: false
+    - label: freight
+      value: '426.42'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/b05a9f3426942753
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/b05a9f3426942753.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SO020163
+    issue_date: '2016-12-04'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Old World Delicatessen
+        address:
+          line1: 2743 Bering St.
+          line2: null
+          city: Anchorage
+          region: null
+          postal_code: '99508'
+          country: USA
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: United Package
+        address: null
+        phone: (503) 555-3199
+        email: null
+        website: null
+        tax_id: null
+        code: '2'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2016-12-04'
+      deliver_by: '2016-12-20'
+      end_date: null
+    refs:
+      order_id: '20163'
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '006'
+      description: Grandma's Boysenberry Spread
+      quantity: '45'
+      unit_price: '23.00'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 8 oz jars
+      line_total: '1035.00'
+      extra:
+        category: Condiments
+    - sku: 009
+      description: Mishi Kobe Niku
+      quantity: '40'
+      unit_price: '89.24'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 18 - 500 g pkgs.
+      line_total: '3569.60'
+      extra:
+        category: Meat/Poultry
+    - sku: '011'
+      description: Queso Cabrales
+      quantity: '15'
+      unit_price: '19.32'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 1 kg pkg.
+      line_total: '289.80'
+      extra:
+        category: Dairy Products
+    - sku: '022'
+      description: Gustaf's Knäckebröd
+      quantity: '50'
+      unit_price: '19.32'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 500 g pkgs.
+      line_total: '966.00'
+      extra:
+        category: Grains/Cereals
+    - sku: '025'
+      description: NuNuCa Nuß-Nougat-Creme
+      quantity: '37'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 20 - 450 g glasses
+      line_total: '476.56'
+      extra:
+        category: Confections
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '12'
+      unit_price: '40.39'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 100 - 100 g pieces
+      line_total: '484.68'
+      extra:
+        category: Confections
+    - sku: 029
+      description: Thüringer Rostbratwurst
+      quantity: '4'
+      unit_price: '113.89'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 50 bags x 30 sausgs.
+      line_total: '455.56'
+      extra:
+        category: Meat/Poultry
+    - sku: '031'
+      description: Gorgonzola Telino
+      quantity: '4'
+      unit_price: '11.50'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 100 g pkgs
+      line_total: '46.00'
+      extra:
+        category: Dairy Products
+    - sku: '045'
+      description: Rogede sild
+      quantity: '35'
+      unit_price: '8.74'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 1k pkg.
+      line_total: '305.90'
+      extra:
+        category: Seafood
+    - sku: '050'
+      description: Valkoinen suklaa
+      quantity: '29'
+      unit_price: '14.95'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 100 g bars
+      line_total: '433.55'
+      extra:
+        category: Confections
+    - sku: '052'
+      description: Filo Mix
+      quantity: '1'
+      unit_price: '6.44'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 16 - 2 kg boxes
+      line_total: '6.44'
+      extra:
+        category: Grains/Cereals
+    - sku: '055'
+      description: Pâté chinois
+      quantity: '36'
+      unit_price: '22.08'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 boxes x 2 pies
+      line_total: '794.88'
+      extra:
+        category: Meat/Poultry
+    - sku: 059
+      description: Raclette Courdavault
+      quantity: '47'
+      unit_price: '50.60'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 5 kg pkg.
+      line_total: '2378.20'
+      extra:
+        category: Dairy Products
+    - sku: '062'
+      description: Tarte au sucre
+      quantity: '9'
+      unit_price: '45.36'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 48 pies
+      line_total: '408.24'
+      extra:
+        category: Confections
+    - sku: '065'
+      description: Louisiana Fiery Hot Pepper Sauce
+      quantity: '3'
+      unit_price: '19.37'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 32 - 8 oz bottles
+      line_total: '58.11'
+      extra:
+        category: Condiments
+    - sku: '067'
+      description: Laughing Lumberjack Lager
+      quantity: '27'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '347.76'
+      extra:
+        category: Beverages
+    - sku: 068
+      description: Scottish Longbreads
+      quantity: '27'
+      unit_price: '11.50'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 boxes x 8 pieces
+      line_total: '310.50'
+      extra:
+        category: Confections
+    - sku: 069
+      description: Gudbrandsdalsost
+      quantity: '20'
+      unit_price: '33.12'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 kg pkg.
+      line_total: '662.40'
+      extra:
+        category: Dairy Products
+    - sku: '070'
+      description: Outback Lager
+      quantity: '6'
+      unit_price: '13.80'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 355 ml bottles
+      line_total: '82.80'
+      extra:
+        category: Beverages
+    - sku: '076'
+      description: Lakkalikööri
+      quantity: '18'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 500 ml
+      line_total: '298.08'
+      extra:
+        category: Beverages
+    - sku: '077'
+      description: Original Frankfurter grüne Soße
+      quantity: '5'
+      unit_price: '11.96'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 boxes
+      line_total: '59.80'
+      extra:
+        category: Condiments
+    summary:
+    - label: packages
+      value: 10
+      fmt: int
+      strong: false
+    - label: freight_terms
+      value: Port dû
+      fmt: text
+      strong: false
+    - label: freight
+      value: '117.30'
+      fmt: money
+      strong: true
+    notes: Fragile. Craint l'humidité. Ne pas gerber sur plus de 3 niveaux.
+    extra: null
+  evaluators: []
+- name: shipping_order/dc90dbc42e3dc90a
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/dc90dbc42e3dc90a.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: AC-EXP-57999
+    issue_date: '2024-10-20'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Gabriel Baker
+        address:
+          line1: 4983 Hilltop Road
+          line2: null
+          city: Beaverton
+          region: OR
+          postal_code: '97005'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2024-10-20'
+      deliver_by: '2024-10-25'
+      end_date: null
+    refs:
+      order_id: SO57999
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-M38S-42
+      description: Mountain-400-W Silver, 42
+      quantity: '1'
+      unit_price: '607.90'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '607.90'
+      extra:
+        category: Mountain Bikes
+        weight: '12.306'
+        line_weight: '12.31'
+    - sku: SH-W890-L
+      description: Women's Mountain Shorts, L
+      quantity: '1'
+      unit_price: '55.29'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '55.29'
+      extra:
+        category: Shorts
+    - sku: SJ-0194-M
+      description: Short-Sleeve Classic Jersey, M
+      quantity: '1'
+      unit_price: '42.65'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '42.65'
+      extra:
+        category: Jerseys
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 12.31 kg
+      fmt: text
+      strong: false
+    - label: declared_value
+      value: '705.84'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Prepaid
+      fmt: text
+      strong: false
+    - label: freight
+      value: '17.65'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/c7c7964db795491e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/c7c7964db795491e.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: AC-EXP-73361
+    issue_date: '2025-05-26'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Blake Scott
+        address:
+          line1: 4265 Boxwood Dr
+          line2: null
+          city: Beaverton
+          region: OR
+          postal_code: '97005'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2025-05-26'
+      deliver_by: '2025-05-31'
+      end_date: null
+    refs:
+      order_id: SO73361
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TT-M928
+      description: Mountain Tire Tube
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Tires and Tubes
+    - sku: FE-6654
+      description: Fender Set - Mountain
+      quantity: '1'
+      unit_price: '17.36'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '17.36'
+      extra:
+        category: Fenders
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: declared_value
+      value: '21.30'
+      fmt: money
+      strong: false
+    - label: freight_terms
+      value: Collect
+      fmt: text
+      strong: false
+    - label: freight
+      value: '0.53'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+- name: shipping_order/4bdf22de9ca10838
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/4bdf22de9ca10838.pdf
+    doc_type: shipping_order
+  metadata: null
+  expected_output:
+    doc_type: shipping_order
+    number: SHP0055760
+    issue_date: '2024-09-12'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee:
+        name: Marvin Rubio
+        address:
+          line1: 9075 Calle Verde
+          line2: null
+          city: Concord
+          region: CA
+          postal_code: '94519'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      carrier:
+        name: Xrq - Truck Ground
+        address: null
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: null
+      pickup_date: '2024-09-12'
+      deliver_by: '2024-09-17'
+      end_date: null
+    refs:
+      order_id: SO55760
+      customer_id: null
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TI-M602
+      description: ML Mountain Tire
+      quantity: '1'
+      unit_price: '23.69'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '23.69'
+      extra:
+        category: Tires and Tubes
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: freight_terms
+      value: Collect
+      fmt: text
+      strong: false
+    - label: freight
+      value: '0.59'
+      fmt: money
+      strong: true
+    notes: Handle with care. Keep dry. Do not stack more than 3 high.
+    extra: null
+  evaluators: []
+evaluators:
+- ExtractionMetrics
+report_evaluators:
+- ExtractionMetricsReport

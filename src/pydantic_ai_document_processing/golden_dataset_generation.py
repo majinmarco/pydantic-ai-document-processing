@@ -1,127 +1,65 @@
-"""
-Walks through documents in data/validation/category_name directory
-
-Samples 20 documents from each category, obtain classification and extraction data, convert to pydantic models
-
-Save each classification/extraction set to pydantic_evals cases/datasets with respective evaluators
-"""
+"""Build typed pydantic_evals datasets from validation PDFs and JSON sidecars."""
 
 from __future__ import annotations
-from xml.dom.minidom import Document
 
 import json
 import random
 import types
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Annotated, Union, get_args, get_origin
 
 from pydantic import BaseModel, TypeAdapter
-from pydantic_evals import Case, Dataset
-from pydantic_evals.evaluators import ConfusionMatrixEvaluator
+from pydantic_evals import Case
 
-from pydantic_ai_document_processing.agent import (
-    DocumentSchema,
-    extraction_agent_schema,
-)
 from pydantic_ai_document_processing.evals import (
+    CASES_DIR,
+    PACKAGE_ROOT,
+    ClassificationCase,
+    ClassificationDataset,
+    ClassificationInput,
+    ClassificationMetrics,
+    ExtractionInput,
     ExtractionMetrics,
     ExtractionMetricsReport,
+    classification_confusion_matrix,
+    to_dataset_pdf_path,
+    typed_extraction_dataset,
 )
 from pydantic_ai_document_processing.schemas import DocumentClassification, DocumentType
 
-_PACKAGE_ROOT = Path(__file__).resolve().parent
-_DATA_ROOT = _PACKAGE_ROOT / "data" / "company-document-dataset-v2" / "validation"
-_CASES_DIR = _PACKAGE_ROOT / "cases" / "datasets"
+_DATA_ROOT = PACKAGE_ROOT / "data" / "company-document-dataset-v2" / "validation"
+
+SAMPLE_SIZE = 20
+SAMPLE_SEED = 42
 
 
-@dataclass
-class ClassificationInput:
-    pdf_path: Path
+def generate_golden_datasets(
+    *,
+    sample_size: int = SAMPLE_SIZE,
+    seed: int = SAMPLE_SEED,
+    cases_dir: Path = CASES_DIR,
+    data_root: Path = _DATA_ROOT,
+) -> None:
+    from pydantic_ai_document_processing.agent import extraction_agent_schema
 
-
-@dataclass
-class ExtractionInput:
-    pdf_path: Path
-    doc_type: DocumentType
-
-
-ClassificationCase = Case[ClassificationInput, DocumentClassification, None]
-ClassificationDataset = Dataset[ClassificationInput, DocumentClassification, None]
-
-
-def generate_golden_datasets():
-    # sample 20 documents from each category
+    rng = random.Random(seed)
+    cases_dir.mkdir(parents=True, exist_ok=True)
     classification_cases: list[ClassificationCase] = []
+
     for category in get_args(DocumentType):
-        category_path = _DATA_ROOT / category
-        documents = list(category_path.glob("*.pdf"))
-        if len(documents) < 20:
-            raise ValueError(f"Not enough documents in {category} category")
-        sampled_documents = random.sample(documents, 20)
+        pdfs = _sample_pdfs(data_root / category, sample_size, rng)
+        classification_cases.extend(_classification_cases(category, pdfs))
+        schema = extraction_agent_schema(category)
+        extraction_cases = _extraction_cases(category, schema, pdfs)
+        _save_extraction_dataset(category, schema, extraction_cases, cases_dir)
 
-        classification_cases.extend(
-            [
-                Case(
-                    name=pdf_path.stem,
-                    inputs=ClassificationInput(pdf_path=pdf_path),
-                    expected_output=DocumentClassification(document_type=category),
-                )
-                for pdf_path in sampled_documents
-            ]
-        )
-        extraction_cases: list[Case] = []
-        for pdf_path in sampled_documents:
-            sidecar_path = pdf_path.with_suffix(".json")
-            if not sidecar_path.exists():
-                raise FileNotFoundError(f"Missing JSON pair for {pdf_path}")
-            sidecar = json.loads(sidecar_path.read_text())
-            doc_schema = extraction_agent_schema(category)
-            extraction_cases.append(
-                Case(
-                    name=pdf_path.stem,
-                    inputs=ExtractionInput(
-                        pdf_path=pdf_path,
-                        doc_type=category,
-                    ),
-                    expected_output=convert_extraction_json_to_pydantic(
-                        sidecar,
-                        doc_schema=doc_schema,
-                    ),
-                )
-            )
-
-        _CASES_DIR.mkdir(parents=True, exist_ok=True)
-
-        extraction_dataset = Dataset(
-            name=f"extraction-{category}",
-            cases=extraction_cases,
-            evaluators=[ExtractionMetrics()],
-            report_evaluators=[ExtractionMetricsReport()],
-        )
-        extraction_dataset.to_file(
-            _CASES_DIR / f"extraction-{category}.yaml",
-            custom_evaluator_types=[ExtractionMetrics],
-            custom_report_evaluator_types=[ExtractionMetricsReport],
-        )
-
-    classification_dataset = Dataset(
-        name="classification-dataset",
-        cases=classification_cases,
-        report_evaluators=[
-            ConfusionMatrixEvaluator(
-                predicted_from="output",
-                expected_from="expected_output",
-            )
-        ],
-    )
-    classification_dataset.to_file(_CASES_DIR / "classification-dataset.yaml")
+    _save_classification_dataset(classification_cases, cases_dir)
 
 
-def convert_extraction_json_to_pydantic(
+def convert_extraction_json_to_pydantic[T: BaseModel](
     extraction_json: dict[str, Any],
-    doc_schema: type[DocumentSchema] | None = None,
-) -> DocumentSchema:
+    doc_schema: type[T],
+) -> T:
     """Map a document JSON pair onto the extraction schema.
 
     Sidecar files are HuggingFace rows: gold extraction lives in
@@ -131,12 +69,6 @@ def convert_extraction_json_to_pydantic(
     dropped or assumed to match 1:1.
     """
     payload = _unwrap_extracted_data(extraction_json)
-    if doc_schema is None:
-        doc_type = payload.get("doc_type") or extraction_json.get("document_type")
-        if not doc_type:
-            raise ValueError("Cannot infer document schema: missing doc_type")
-        doc_schema = extraction_agent_schema(doc_type)
-
     adapted, leftover = _adapt_model(doc_schema, payload)
     if leftover:
         extra = adapted.setdefault("extra", {})
@@ -146,6 +78,87 @@ def convert_extraction_json_to_pydantic(
         adapted["extra"] = _deep_merge(leftover, extra)
 
     return doc_schema.model_validate(adapted)
+
+
+def _sample_pdfs(category_path: Path, sample_size: int, rng: random.Random) -> list[Path]:
+    documents = list(category_path.glob("*.pdf"))
+    if len(documents) < sample_size:
+        raise ValueError(
+            f"Not enough documents in {category_path}: {len(documents)} < {sample_size}"
+        )
+    return rng.sample(documents, sample_size)
+
+
+def _classification_cases(
+    category: DocumentType,
+    pdfs: list[Path],
+) -> list[ClassificationCase]:
+    return [
+        Case(
+            name=f"{category}/{pdf_path.stem}",
+            inputs=ClassificationInput(pdf_path=to_dataset_pdf_path(pdf_path)),
+            expected_output=DocumentClassification(document_type=category),
+        )
+        for pdf_path in pdfs
+    ]
+
+
+def _extraction_cases[T: BaseModel](
+    category: DocumentType,
+    schema: type[T],
+    pdfs: list[Path],
+) -> list[Case[ExtractionInput, T, dict[str, Any]]]:
+    cases: list[Case[ExtractionInput, T, dict[str, Any]]] = []
+    for pdf_path in pdfs:
+        sidecar_path = pdf_path.with_suffix(".json")
+        if not sidecar_path.exists():
+            raise FileNotFoundError(f"Missing JSON pair for {pdf_path}")
+        sidecar = json.loads(sidecar_path.read_text())
+        cases.append(
+            Case(
+                name=f"{category}/{pdf_path.stem}",
+                inputs=ExtractionInput(
+                    pdf_path=to_dataset_pdf_path(pdf_path),
+                    doc_type=category,
+                ),
+                expected_output=convert_extraction_json_to_pydantic(sidecar, schema),
+            )
+        )
+    return cases
+
+
+def _save_extraction_dataset[T: BaseModel](
+    category: DocumentType,
+    schema: type[T],
+    cases: list[Case[ExtractionInput, T, dict[str, Any]]],
+    cases_dir: Path,
+) -> None:
+    dataset = typed_extraction_dataset(schema)(
+        name=f"extraction-{category}",
+        cases=cases,
+        evaluators=[ExtractionMetrics()],
+        report_evaluators=[ExtractionMetricsReport()],
+    )
+    dataset.to_file(
+        cases_dir / f"extraction-{category}.yaml",
+        custom_evaluator_types=[ExtractionMetrics],
+        custom_report_evaluator_types=[ExtractionMetricsReport],
+    )
+
+
+def _save_classification_dataset(
+    cases: list[ClassificationCase],
+    cases_dir: Path,
+) -> None:
+    ClassificationDataset(
+        name="classification",
+        cases=cases,
+        evaluators=[ClassificationMetrics()],
+        report_evaluators=[classification_confusion_matrix()],
+    ).to_file(
+        cases_dir / "classification.yaml",
+        custom_evaluator_types=[ClassificationMetrics],
+    )
 
 
 def _unwrap_extracted_data(extraction_json: dict[str, Any]) -> dict[str, Any]:

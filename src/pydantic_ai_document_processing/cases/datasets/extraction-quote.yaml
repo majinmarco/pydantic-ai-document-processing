@@ -1,0 +1,2299 @@
+# yaml-language-server: $schema=extraction-quote_schema.json
+name: extraction-quote
+cases:
+- name: quote/cd9fa117305d21a4
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/cd9fa117305d21a4.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT062600
+    issue_date: '2024-12-10'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Sheila Gutierrez
+        address:
+          line1: 3023 Adria Drive
+          line2: null
+          city: Berkeley
+          region: CA
+          postal_code: '94704'
+          country: United States
+        phone: 551-555-0114
+        email: sheila11@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00018405
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-02-08'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00018405
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Bottles and Cages
+    totals:
+      currency: GBP
+      subtotal: '3.94'
+      gross: '3.94'
+      discount_total: '0.00'
+      freight: '0.09'
+      taxes:
+      - rate: '0.0802'
+        base: '3.94'
+        amount: '0.32'
+        name: null
+      tax_total: '0.32'
+      total: '4.35'
+    notes: Orders are shipped within 2 business days; tracking details will be emailed.
+    extra:
+      validity: This quotation is valid for 60 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/c21ab4d1cf6736a1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/c21ab4d1cf6736a1.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: Q-2013-23993
+    issue_date: '2013-06-02'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Familia Arquibaldo
+        address:
+          line1: Rua Orós, 92
+          line2: null
+          city: Sao Paulo
+          region: null
+          postal_code: 05442-030
+          country: Brazil
+        phone: (11) 555-9857
+        email: null
+        website: null
+        tax_id: null
+        code: FAMIA
+        bank: null
+      ship_to:
+        name: Richter Supermarkt
+        address:
+          line1: Starenweg 5
+          line2: null
+          city: Genève
+          region: null
+          postal_code: '1204'
+          country: Switzerland
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2013-07-02'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: FAMIA
+      po_number: PO-84462
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '025'
+      description: NuNuCa Nuß-Nougat-Creme
+      quantity: '43'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 20 - 450 g glasses
+      line_total: '553.84'
+      extra:
+        category: Confections
+    totals:
+      currency: EUR
+      subtotal: '553.84'
+      gross: '553.84'
+      discount_total: '0.00'
+      freight: '19.09'
+      taxes:
+      - rate: '0.20'
+        base: '553.84'
+        amount: '110.77'
+        name: null
+      tax_total: '110.77'
+      total: '683.70'
+    notes: Livraison gratuite dès 500 € d’achat.
+    extra:
+      parties:
+        bill_to:
+          contact: Aria Cruz
+      validity: Ce devis est valable 30 jours. Prix hors taxes sauf mention contraire.
+  evaluators: []
+- name: quote/30d225eb093066f0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/30d225eb093066f0.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT065245
+    issue_date: '2025-01-13'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Fourth Bike Store
+        address:
+          line1: 77993 Mentor Ave.
+          line2: null
+          city: Mentor
+          region: OH
+          postal_code: '44060'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: AW00029551
+        bank: null
+      ship_to:
+        name: Fourth Bike Store
+        address:
+          line1: 77993 Mentor Ave.
+          line2: null
+          city: Mentor
+          region: OH
+          postal_code: '44060'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-02-12'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00029551
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-T79U-60
+      description: Touring-1000 Blue, 60
+      quantity: '1'
+      unit_price: '1130.05'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1130.05'
+      extra:
+        category: Touring Bikes
+        weight: '11.748'
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '5'
+      unit_price: '2.36'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '11.80'
+      extra:
+        category: Bottles and Cages
+    - sku: HL-U509-B
+      description: Sport-100 Helmet, Blue
+      quantity: '3'
+      unit_price: '16.58'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '49.74'
+      extra:
+        category: Helmets
+    - sku: BK-T18Y-50
+      description: Touring-3000 Yellow, 50
+      quantity: '3'
+      unit_price: '351.87'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1055.61'
+      extra:
+        category: Touring Bikes
+        weight: '13.213'
+    - sku: SJ-0194-L
+      description: Short-Sleeve Classic Jersey, L
+      quantity: '6'
+      unit_price: '25.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '153.54'
+      extra:
+        category: Jerseys
+    - sku: VE-C304-M
+      description: Classic Vest, M
+      quantity: '1'
+      unit_price: '30.10'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '30.10'
+      extra:
+        category: Vests
+    - sku: BK-T79Y-54
+      description: Touring-1000 Yellow, 54
+      quantity: '1'
+      unit_price: '1130.05'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1130.05'
+      extra:
+        category: Touring Bikes
+        weight: '11.648'
+    - sku: BK-T18Y-58
+      description: Touring-3000 Yellow, 58
+      quantity: '2'
+      unit_price: '351.87'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '703.74'
+      extra:
+        category: Touring Bikes
+        weight: '13.513'
+    totals:
+      currency: GBP
+      subtotal: '4264.63'
+      gross: '4264.63'
+      discount_total: '0.00'
+      freight: '664.47'
+      taxes:
+      - rate: '0.0958'
+        base: '4264.63'
+        amount: '408.55'
+        name: null
+      tax_total: '408.55'
+      total: '5337.65'
+    notes: Orders are shipped within 2 business days; tracking details will be emailed.
+    extra:
+      parties:
+        bill_to:
+          contact: Mason Bendixen
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/ec25376cd39b8f16
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/ec25376cd39b8f16.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: Q/19/25946
+    issue_date: '2019-01-30'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Centro comercial Moctezuma
+        address:
+          line1: Sierras de Granada 9993
+          line2: null
+          city: México D.F.
+          region: null
+          postal_code: '05022'
+          country: Mexico
+        phone: (5) 555-3392
+        email: null
+        website: null
+        tax_id: null
+        code: CENTC
+        bank: null
+      ship_to:
+        name: Blondel père et fils
+        address:
+          line1: 24, place Kléber
+          line2: null
+          city: Strasbourg
+          region: null
+          postal_code: '67000'
+          country: France
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2019-03-01'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: CENTC
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '004'
+      description: Chef Anton's Cajun Seasoning
+      quantity: '27'
+      unit_price: '20.24'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 48 - 6 oz jars
+      line_total: '546.48'
+      extra:
+        category: Condiments
+    - sku: '061'
+      description: Sirop d'érable
+      quantity: '43'
+      unit_price: '26.22'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 24 - 500 ml bottles
+      line_total: '1127.46'
+      extra:
+        category: Condiments
+    totals:
+      currency: EUR
+      subtotal: '1673.94'
+      gross: '1673.94'
+      discount_total: '0.00'
+      freight: '25.30'
+      taxes:
+      - rate: '0.20'
+        base: '1673.94'
+        amount: '334.79'
+        name: null
+      tax_total: '334.79'
+      total: '2034.03'
+    notes: Marchandises livrées sous réserve de propriété.
+    extra:
+      parties:
+        bill_to:
+          contact: Francisco Chang
+          fax: (5) 555-7293
+      validity: Ce devis est valable 30 jours. Prix hors taxes sauf mention contraire.
+  evaluators: []
+- name: quote/6bd93401ff4fc0b0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/6bd93401ff4fc0b0.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: Q-2018-18935
+    issue_date: '2018-11-05'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Maison Dewey
+        address:
+          line1: Rue Joseph-Bens 532
+          line2: null
+          city: Bruxelles
+          region: null
+          postal_code: B-1180
+          country: Belgium
+        phone: (02) 201 24 67
+        email: null
+        website: null
+        tax_id: null
+        code: MAISD
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2018-12-05'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: MAISD
+      po_number: PO-36256
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '020'
+      description: Sir Rodney's Marmalade
+      quantity: '28'
+      unit_price: '74.52'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 30 gift boxes
+      line_total: '2086.56'
+      extra:
+        category: Confections
+    - sku: '046'
+      description: Spegesild
+      quantity: '39'
+      unit_price: '11.04'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 4 - 450 g glasses
+      line_total: '430.56'
+      extra:
+        category: Seafood
+    - sku: 048
+      description: Chocolade
+      quantity: '47'
+      unit_price: '11.73'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 pkgs.
+      line_total: '551.31'
+      extra:
+        category: Confections
+    - sku: '064'
+      description: Wimmers gute Semmelknödel
+      quantity: '3'
+      unit_price: '30.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 20 bags x 4 pieces
+      line_total: '91.77'
+      extra:
+        category: Grains/Cereals
+    - sku: 069
+      description: Gudbrandsdalsost
+      quantity: '49'
+      unit_price: '33.12'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 kg pkg.
+      line_total: '1622.88'
+      extra:
+        category: Dairy Products
+    totals:
+      currency: EUR
+      subtotal: '4783.08'
+      gross: '4783.08'
+      discount_total: '0.00'
+      freight: '345.69'
+      taxes: null
+      tax_total: '0.00'
+      total: '5128.77'
+    notes: Pénalités de 1,5 % par mois après échéance.
+    extra:
+      parties:
+        bill_to:
+          contact: Catherine Dewey
+          fax: (02) 201 24 68
+      validity: Ce devis est valable 30 jours. Prix hors taxes sauf mention contraire.
+  evaluators: []
+- name: quote/428040a52b8a91d8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/428040a52b8a91d8.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT059622
+    issue_date: '2024-10-17'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Ryan Zhang
+        address:
+          line1: 4176 Cotton Ct
+          line2: null
+          city: Spring Valley
+          region: CA
+          postal_code: '91977'
+          country: United States
+        phone: 295-555-0128
+        email: ryan27@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00011873
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2024-11-16'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00011873
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-M68B-38
+      description: Mountain-200 Black, 38
+      quantity: '1'
+      unit_price: '1813.04'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1813.04'
+      extra:
+        category: Mountain Bikes
+        weight: '10.591'
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Bottles and Cages
+    - sku: HL-U509
+      description: Sport-100 Helmet, Black
+      quantity: '1'
+      unit_price: '27.64'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '27.64'
+      extra:
+        category: Helmets
+    totals:
+      currency: GBP
+      subtotal: '1844.62'
+      gross: '1844.62'
+      discount_total: '0.00'
+      freight: '46.31'
+      taxes:
+      - rate: '0.0800'
+        base: '1844.62'
+        amount: '147.57'
+        name: null
+      tax_total: '147.57'
+      total: '2038.50'
+    notes: Thank you for your purchase; we appreciate your support.
+    extra:
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/a2b3c45d9e6ddb15
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/a2b3c45d9e6ddb15.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: Q-2018-10927
+    issue_date: '2018-02-27'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: La corne d'abondance
+        address:
+          line1: 67, avenue de l'Europe
+          line2: null
+          city: Versailles
+          region: null
+          postal_code: '78000'
+          country: France
+        phone: 30.59.84.10
+        email: null
+        website: null
+        tax_id: null
+        code: LACOR
+        bank: null
+      ship_to:
+        name: La corne d-abondance
+        address:
+          line1: 67, avenue de l-Europe
+          line2: null
+          city: Versailles
+          region: null
+          postal_code: '78000'
+          country: France
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2018-04-28'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: LACOR
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '020'
+      description: Sir Rodney's Marmalade
+      quantity: '5'
+      unit_price: '74.52'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 30 gift boxes
+      line_total: '372.60'
+      extra:
+        category: Confections
+    - sku: '052'
+      description: Filo Mix
+      quantity: '5'
+      unit_price: '6.44'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 16 - 2 kg boxes
+      line_total: '32.20'
+      extra:
+        category: Grains/Cereals
+    - sku: '076'
+      description: Lakkalikööri
+      quantity: '20'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 500 ml
+      line_total: '331.20'
+      extra:
+        category: Beverages
+    totals:
+      currency: EUR
+      subtotal: '736.00'
+      gross: '736.00'
+      discount_total: '0.00'
+      freight: '16.10'
+      taxes: null
+      tax_total: '0.00'
+      total: '752.10'
+    notes: Conservez les produits au frais selon étiquette.
+    extra:
+      parties:
+        bill_to:
+          contact: Daniel Tonini
+          fax: 30.59.85.11
+      refs:
+        salesperson: Margaret Peacock
+      validity: Ce devis est valable 60 jours. Prix hors taxes sauf mention contraire.
+  evaluators: []
+- name: quote/2c93cba5f514e131
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/2c93cba5f514e131.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT066668
+    issue_date: '2025-02-06'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Cassidy Washington
+        address:
+          line1: 8584 Clay Rd
+          line2: null
+          city: Warrington
+          region: null
+          postal_code: WA1
+          country: United Kingdom
+        phone: 1 (11) 500 555-0152
+        email: cassidy14@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00017701
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-02-21'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00017701
+      po_number: PO-10598
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TT-M928
+      description: Mountain Tire Tube
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Tires and Tubes
+    totals:
+      currency: GBP
+      subtotal: '3.94'
+      gross: '3.94'
+      discount_total: '0.00'
+      freight: '0.09'
+      taxes:
+      - rate: '0.0802'
+        base: '3.94'
+        amount: '0.32'
+        name: null
+      tax_total: '0.32'
+      total: '4.35'
+    notes: Apply grease regularly to maintain chain performance.
+    extra:
+      validity: This quotation is valid for 15 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/792c1e9ac0c7b7d4
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/792c1e9ac0c7b7d4.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: Q-2015-24555
+    issue_date: '2015-08-04'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Victuailles en stock
+        address:
+          line1: 2, rue du Commerce
+          line2: null
+          city: Lyon
+          region: null
+          postal_code: '69004'
+          country: France
+        phone: 78.32.54.86
+        email: null
+        website: null
+        tax_id: null
+        code: VICTE
+        bank: null
+      ship_to:
+        name: Antonio Moreno Taquería
+        address:
+          line1: Mataderos 2312
+          line2: null
+          city: México D.F.
+          region: null
+          postal_code: '5023'
+          country: Mexico
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2015-09-03'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: VICTE
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: 039
+      description: Chartreuse verte
+      quantity: '43'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 750 cc per bottle
+      line_total: '712.08'
+      extra:
+        category: Beverages
+    totals:
+      currency: EUR
+      subtotal: '712.08'
+      gross: '712.08'
+      discount_total: '0.00'
+      freight: '19.09'
+      taxes:
+      - rate: '0.20'
+        base: '712.08'
+        amount: '142.42'
+        name: null
+      tax_total: '142.42'
+      total: '873.59'
+    notes: Pénalités de 1,5 % par mois après échéance.
+    extra:
+      parties:
+        bill_to:
+          contact: Mary Saveley
+          fax: 78.32.54.87
+      refs:
+        salesperson: Robert King
+      validity: Ce devis est valable 30 jours. Prix hors taxes sauf mention contraire.
+  evaluators: []
+- name: quote/47d2025cf9cb71e6
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/47d2025cf9cb71e6.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT063175
+    issue_date: '2024-12-19'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Guaranteed Sales and Service
+        address:
+          line1: Buckeye Factory Shops
+          line2: null
+          city: Burbank
+          region: OH
+          postal_code: '44214'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: AW00030009
+        bank: null
+      ship_to:
+        name: Guaranteed Sales and Service
+        address:
+          line1: Buckeye Factory Shops
+          line2: null
+          city: Burbank
+          region: OH
+          postal_code: '44214'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-01-03'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00030009
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R64Y-48
+      description: Road-550-W Yellow, 48
+      quantity: '2'
+      unit_price: '531.11'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1062.22'
+      extra:
+        category: Road Bikes
+        weight: '8.473'
+    - sku: BK-R79Y-40
+      description: Road-350-W Yellow, 40
+      quantity: '6'
+      unit_price: '806.27'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '4837.62'
+      extra:
+        category: Road Bikes
+        weight: '6.963'
+    - sku: SO-R809-L
+      description: Racing Socks, L
+      quantity: '3'
+      unit_price: '4.26'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '12.78'
+      extra:
+        category: Socks
+    totals:
+      currency: GBP
+      subtotal: '5912.62'
+      gross: '5912.62'
+      discount_total: '0.00'
+      freight: '417.40'
+      taxes:
+      - rate: '0.0959'
+        base: '5912.62'
+        amount: '567.02'
+        name: null
+      tax_total: '567.02'
+      total: '6897.04'
+    notes: Thank you for your order today.
+    extra:
+      parties:
+        bill_to:
+          contact: Tosh Meston
+      refs:
+        salesperson: Jillian Carson
+      validity: This quotation is valid for 15 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/21086a2514df2e5e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/21086a2514df2e5e.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT073413
+    issue_date: '2025-05-08'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Sharon Yuan
+        address:
+          line1: 1048 Burwood Way
+          line2: null
+          city: Hervey Bay
+          region: QLD
+          postal_code: '4655'
+          country: Australia
+        phone: 1 (11) 500 555-0128
+        email: sharon13@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00012008
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-06-07'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00012008
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TI-M267
+      description: LL Mountain Tire
+      quantity: '1'
+      unit_price: '19.74'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '19.74'
+      extra:
+        category: Tires and Tubes
+    - sku: GL-H102-L
+      description: Half-Finger Gloves, L
+      quantity: '1'
+      unit_price: '19.35'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '19.35'
+      extra:
+        category: Gloves
+    totals:
+      currency: GBP
+      subtotal: '39.09'
+      gross: '39.09'
+      discount_total: '0.00'
+      freight: '0.98'
+      taxes:
+      - rate: '0.0800'
+        base: '39.09'
+        amount: '3.13'
+        name: null
+      tax_total: '3.13'
+      total: '43.20'
+    notes: Standard delivery takes five to seven business days.
+    extra:
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/7e8dfda81707cdd7
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/7e8dfda81707cdd7.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: Q-2014-23261
+    issue_date: '2014-08-24'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Rancho grande
+        address:
+          line1: Av. del Libertador 900
+          line2: null
+          city: Buenos Aires
+          region: null
+          postal_code: '1010'
+          country: Argentina
+        phone: (1) 123-5555
+        email: null
+        website: null
+        tax_id: null
+        code: RANCH
+        bank: null
+      ship_to:
+        name: Rattlesnake Canyon Grocery
+        address:
+          line1: 2817 Milton Dr.
+          line2: null
+          city: Albuquerque
+          region: null
+          postal_code: '87110'
+          country: USA
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2014-09-08'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: RANCH
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '014'
+      description: Tofu
+      quantity: '14'
+      unit_price: '21.39'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 40 - 100 g pkgs.
+      line_total: '299.46'
+      extra:
+        category: Produce
+    - sku: '015'
+      description: Genen Shouyu
+      quantity: '15'
+      unit_price: '14.26'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 250 ml bottles
+      line_total: '213.90'
+      extra:
+        category: Condiments
+    totals:
+      currency: EUR
+      subtotal: '513.36'
+      gross: '513.36'
+      discount_total: '0.00'
+      freight: '15.87'
+      taxes: null
+      tax_total: '0.00'
+      total: '529.23'
+    notes: Merci pour votre commande, nous préparons l’expédition.
+    extra:
+      parties:
+        bill_to:
+          contact: Sergio Gutiérrez
+          fax: (1) 123-5556
+      validity: Ce devis est valable 15 jours. Prix hors taxes sauf mention contraire.
+  evaluators: []
+- name: quote/d59b8b7c9239b5e2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/d59b8b7c9239b5e2.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT074345
+    issue_date: '2025-05-22'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Paige Blue
+        address:
+          line1: 7237 Cardinal Ct
+          line2: null
+          city: Victoria
+          region: BC
+          postal_code: V8V
+          country: Canada
+        phone: 566-555-0190
+        email: paige38@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00021703
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-06-21'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00021703
+      po_number: PO-80305
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TI-M267
+      description: LL Mountain Tire
+      quantity: '1'
+      unit_price: '19.74'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '19.74'
+      extra:
+        category: Tires and Tubes
+    - sku: TT-M928
+      description: Mountain Tire Tube
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Tires and Tubes
+    totals:
+      currency: GBP
+      subtotal: '23.68'
+      gross: '23.68'
+      discount_total: '0.00'
+      freight: '0.59'
+      taxes:
+      - rate: '0.0801'
+        base: '23.68'
+        amount: '1.90'
+        name: null
+      tax_total: '1.90'
+      total: '26.17'
+    notes: Overdue balances attract interest at five percent annually.
+    extra:
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/c8a213a06843c603
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/c8a213a06843c603.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT056596
+    issue_date: '2024-09-15'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Karl Jai
+        address:
+          line1: 1111, rue de Longchamp
+          line2: null
+          city: Colomiers
+          region: null
+          postal_code: '31770'
+          country: France
+        phone: 1 (11) 500 555-0119
+        email: karl12@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00021665
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2024-10-15'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00021665
+      po_number: PO-91042
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R19B-58
+      description: Road-750 Black, 58
+      quantity: '1'
+      unit_price: '426.59'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '426.59'
+      extra:
+        category: Road Bikes
+        weight: '9.430'
+    - sku: BC-R205
+      description: Road Bottle Cage
+      quantity: '1'
+      unit_price: '7.10'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '7.10'
+      extra:
+        category: Bottles and Cages
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Bottles and Cages
+    totals:
+      currency: GBP
+      subtotal: '437.63'
+      gross: '437.63'
+      discount_total: '0.00'
+      freight: '10.94'
+      taxes:
+      - rate: '0.0800'
+        base: '437.63'
+        amount: '35.01'
+        name: null
+      tax_total: '35.01'
+      total: '483.58'
+    notes: Thank you for your order today.
+    extra:
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/f3bfa8aa8b9db78d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/f3bfa8aa8b9db78d.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT050046
+    issue_date: '2024-02-22'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Raul Nara
+        address:
+          line1: 710, rue Surcouf
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75009'
+          country: France
+        phone: 1 (11) 500 555-0146
+        email: raul14@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00016404
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2024-03-23'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00016404
+      po_number: PO-63310
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R89R-52
+      description: Road-250 Red, 52
+      quantity: '1'
+      unit_price: '1930.25'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1930.25'
+      extra:
+        category: Road Bikes
+        weight: '6.994'
+    totals:
+      currency: GBP
+      subtotal: '1930.25'
+      gross: '1930.25'
+      discount_total: '0.00'
+      freight: '48.25'
+      taxes:
+      - rate: '0.0800'
+        base: '1930.25'
+        amount: '154.42'
+        name: null
+      tax_total: '154.42'
+      total: '2132.92'
+    notes: Defective parts may be returned within ninety days.
+    extra:
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/96bed54bedf24c68
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/96bed54bedf24c68.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT066645
+    issue_date: '2025-02-02'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Linda Suarez
+        address:
+          line1: 258 Bluejay Dr.
+          line2: null
+          city: Milsons Point
+          region: NSW
+          postal_code: '2061'
+          country: Australia
+        phone: 1 (11) 500 555-0176
+        email: linda34@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00016665
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-03-04'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00016665
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TT-M928
+      description: Mountain Tire Tube
+      quantity: '1'
+      unit_price: '3.94'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.94'
+      extra:
+        category: Tires and Tubes
+    - sku: TI-M602
+      description: ML Mountain Tire
+      quantity: '1'
+      unit_price: '23.69'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '23.69'
+      extra:
+        category: Tires and Tubes
+    - sku: CL-9009
+      description: Bike Wash - Dissolver
+      quantity: '1'
+      unit_price: '6.28'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '6.28'
+      extra:
+        category: Cleaners
+    totals:
+      currency: GBP
+      subtotal: '33.91'
+      gross: '33.91'
+      discount_total: '0.00'
+      freight: '0.85'
+      taxes:
+      - rate: '0.0799'
+        base: '33.91'
+        amount: '2.71'
+        name: null
+      tax_total: '2.71'
+      total: '37.47'
+    notes: Unused items may be returned within 14 days for a full refund.
+    extra:
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/dbd3c0706fe9f8ab
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/dbd3c0706fe9f8ab.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT052442
+    issue_date: '2024-07-02'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Tommy Shen
+        address:
+          line1: Kulmer Straße 3646
+          line2: null
+          city: Berlin
+          region: null
+          postal_code: '14197'
+          country: Germany
+        phone: 1 (11) 500 555-0169
+        email: tommy0@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00025645
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2024-08-31'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00025645
+      po_number: PO-48192
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TI-R092
+      description: LL Road Tire
+      quantity: '1'
+      unit_price: '16.98'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '16.98'
+      extra:
+        category: Tires and Tubes
+    totals:
+      currency: GBP
+      subtotal: '16.98'
+      gross: '16.98'
+      discount_total: '0.00'
+      freight: '0.43'
+      taxes:
+      - rate: '0.0800'
+        base: '16.98'
+        amount: '1.36'
+        name: null
+      tax_total: '1.36'
+      total: '18.77'
+    notes: Defective parts may be returned within ninety days.
+    extra:
+      validity: This quotation is valid for 60 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/f6b31e1845e9ea77
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/f6b31e1845e9ea77.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT060698
+    issue_date: '2024-11-19'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Gabriella Collins
+        address:
+          line1: 5bis, boulevard du Montparnasse
+          line2: null
+          city: Chatou
+          region: null
+          postal_code: '78400'
+          country: France
+        phone: 1 (11) 500 555-0183
+        email: gabriella23@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00013592
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2024-12-04'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00013592
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-M68S-46
+      description: Mountain-200 Silver, 46
+      quantity: '1'
+      unit_price: '1832.79'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1832.79'
+      extra:
+        category: Mountain Bikes
+        weight: '10.945'
+    - sku: HL-U509-R
+      description: Sport-100 Helmet, Red
+      quantity: '1'
+      unit_price: '27.64'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '27.64'
+      extra:
+        category: Helmets
+    totals:
+      currency: GBP
+      subtotal: '1860.43'
+      gross: '1860.43'
+      discount_total: '0.00'
+      freight: '46.51'
+      taxes:
+      - rate: '0.0800'
+        base: '1860.43'
+        amount: '148.84'
+        name: null
+      tax_total: '148.84'
+      total: '2055.78'
+    notes: Standard delivery takes five to seven business days.
+    extra:
+      validity: This quotation is valid for 15 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/ec0515f1bb77080f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/ec0515f1bb77080f.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT063636
+    issue_date: '2024-12-31'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Dalton Perez
+        address:
+          line1: 6083 San Jose
+          line2: null
+          city: Haney
+          region: BC
+          postal_code: V2W 1W2
+          country: Canada
+        phone: 559-555-0115
+        email: dalton37@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00011091
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-03-01'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00011091
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TT-R982
+      description: Road Tire Tube
+      quantity: '1'
+      unit_price: '3.15'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3.15'
+      extra:
+        category: Tires and Tubes
+    - sku: TI-R092
+      description: LL Road Tire
+      quantity: '1'
+      unit_price: '16.98'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '16.98'
+      extra:
+        category: Tires and Tubes
+    totals:
+      currency: GBP
+      subtotal: '20.13'
+      gross: '20.13'
+      discount_total: '0.00'
+      freight: '0.51'
+      taxes:
+      - rate: '0.0801'
+        base: '20.13'
+        amount: '1.61'
+        name: null
+      tax_total: '1.61'
+      total: '22.25'
+    notes: Please retain packaging until installation is complete.
+    extra:
+      validity: This quotation is valid for 60 days. Prices exclude taxes unless stated.
+  evaluators: []
+- name: quote/afbbd2f3bceb9784
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/afbbd2f3bceb9784.pdf
+    doc_type: quote
+  metadata: null
+  expected_output:
+    doc_type: quote
+    number: QT067941
+    issue_date: '2025-02-19'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Marcus Garcia
+        address:
+          line1: 137 Mazatlan
+          line2: null
+          city: El Cajon
+          region: CA
+          postal_code: '92020'
+          country: United States
+        phone: 582-555-0192
+        email: marcus17@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00016095
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: null
+      valid_until: '2025-03-21'
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: AW00016095
+      po_number: null
+      carrier: null
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-M68B-46
+      description: Mountain-200 Black, 46
+      quantity: '1'
+      unit_price: '1813.04'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '1813.04'
+      extra:
+        category: Mountain Bikes
+        weight: '10.945'
+    - sku: TI-M823
+      description: HL Mountain Tire
+      quantity: '1'
+      unit_price: '27.65'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '27.65'
+      extra:
+        category: Tires and Tubes
+    totals:
+      currency: GBP
+      subtotal: '1840.69'
+      gross: '1840.69'
+      discount_total: '0.00'
+      freight: '46.02'
+      taxes:
+      - rate: '0.0800'
+        base: '1840.69'
+        amount: '147.26'
+        name: null
+      tax_total: '147.26'
+      total: '2033.97'
+    notes: Orders are shipped within 2 business days; tracking details will be emailed.
+    extra:
+      validity: This quotation is valid for 30 days. Prices exclude taxes unless stated.
+  evaluators: []
+evaluators:
+- ExtractionMetrics
+report_evaluators:
+- ExtractionMetricsReport

@@ -21,6 +21,15 @@ DocumentSchema = (
     Invoice | PackingSlip | PurchaseOrder | Quote | ShippingOrder | WorkOrder
 )
 
+SCHEMA_BY_TYPE: dict[DocumentType, type[DocumentSchema]] = {
+    "invoice": Invoice,
+    "packing_slip": PackingSlip,
+    "purchase_order": PurchaseOrder,
+    "quote": Quote,
+    "shipping_order": ShippingOrder,
+    "work_order": WorkOrder,
+}
+
 load_dotenv()
 
 CHROMA_COLLECTION = "pdf_vectors"
@@ -40,21 +49,11 @@ class ClassificationAgentDeps:
     # few_shot_examples: list[dict[str, str]] = field(default_factory=lambda: [])
 
 
-# extraction agent schema definition
 def extraction_agent_schema(doc_type: DocumentType) -> type[DocumentSchema]:
-    match doc_type:
-        case "invoice":
-            return Invoice
-        case "packing_slip":
-            return PackingSlip
-        case "purchase_order":
-            return PurchaseOrder
-        case "quote":
-            return Quote
-        case "shipping_order":
-            return ShippingOrder
-        case "work_order":
-            return WorkOrder
+    try:
+        return SCHEMA_BY_TYPE[doc_type]
+    except KeyError:
+        raise ValueError(f"Unknown document type: {doc_type}") from None
 
 
 @dataclass

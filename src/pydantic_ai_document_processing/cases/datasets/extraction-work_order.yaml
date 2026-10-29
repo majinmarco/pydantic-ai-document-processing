@@ -1,0 +1,2059 @@
+# yaml-language-server: $schema=extraction-work_order_schema.json
+name: extraction-work_order
+cases:
+- name: work_order/b608a98f0b0fc2aa
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/b608a98f0b0fc2aa.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-64747
+    issue_date: '2025-03-21'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-04-01'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-04-04'
+    items:
+    - sku: '1'
+      description: Frame Forming
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-03-21'
+        planned_end: '2025-04-01'
+        actual_start: '2025-03-21'
+        actual_end: '2025-04-04'
+        hours: '4.10'
+        planned_cost: '72.88'
+        actual_cost: '72.88'
+    - sku: '2'
+      description: Frame Welding
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-03-21'
+        planned_end: '2025-04-01'
+        actual_start: '2025-03-21'
+        actual_end: '2025-04-04'
+        hours: '3.50'
+        planned_cost: '69.13'
+        actual_cost: '69.13'
+    - sku: '3'
+      description: Debur and Polish
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-03-21'
+        planned_end: '2025-04-01'
+        actual_start: '2025-03-21'
+        actual_end: '2025-04-04'
+        hours: '1.00'
+        planned_cost: '11.46'
+        actual_cost: '11.46'
+    - sku: '5'
+      description: Specialized Paint
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-03-21'
+        planned_end: '2025-04-01'
+        actual_start: '2025-03-21'
+        actual_end: '2025-04-04'
+        hours: '2.00'
+        planned_cost: '28.44'
+        actual_cost: '28.44'
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-03-21'
+        planned_end: '2025-04-01'
+        actual_start: '2025-03-21'
+        actual_end: '2025-04-04'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    - sku: '7'
+      description: Final Assembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-03-21'
+        planned_end: '2025-04-01'
+        actual_start: '2025-03-21'
+        actual_end: '2025-04-04'
+        hours: '4.00'
+        planned_cost: '38.71'
+        actual_cost: '38.71'
+    summary:
+    - label: total_hours
+      value: '17.60'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '249.65'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '249.65'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - LL Mountain Frame - Silver, 40
+      - - product_number
+        - FR-M21S-40
+      - - order_qty
+        - 2
+      - - stocked_qty
+        - 2
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/13b32edf58bb878f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/13b32edf58bb878f.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-66126
+    issue_date: '2025-04-02'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-04-13'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-04-18'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-04-02'
+        planned_end: '2025-04-13'
+        actual_start: '2025-04-02'
+        actual_end: '2025-04-18'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - HL Crankset
+      - - product_number
+        - CS-9183
+      - - order_qty
+        - 426
+      - - stocked_qty
+        - 426
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/55a2c9418e2db030
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/55a2c9418e2db030.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-15227
+    issue_date: '2023-05-17'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2023-05-28'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2023-06-16'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-05-17'
+        planned_end: '2023-05-28'
+        actual_start: '2023-05-17'
+        actual_end: '2023-06-16'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - ML Crankset
+      - - product_number
+        - CS-6583
+      - - order_qty
+        - 2
+      - - stocked_qty
+        - 2
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/4f674e1e2950fdeb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/4f674e1e2950fdeb.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-20339
+    issue_date: '2023-08-21'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2023-09-01'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2023-09-04'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-08-21'
+        planned_end: '2023-09-01'
+        actual_start: '2023-08-21'
+        actual_end: '2023-09-04'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - ML Road Rear Wheel
+      - - product_number
+        - RW-R762
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/411dcfc7fcc3d7c5
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/411dcfc7fcc3d7c5.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-60248
+    issue_date: '2025-02-05'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-02-16'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-02-16'
+    items:
+    - sku: '1'
+      description: Frame Forming
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-02-05'
+        planned_end: '2025-02-16'
+        actual_start: '2025-02-14'
+        actual_end: '2025-02-16'
+        hours: '4.10'
+        planned_cost: '72.88'
+        actual_cost: '72.88'
+    - sku: '2'
+      description: Frame Welding
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-02-05'
+        planned_end: '2025-02-16'
+        actual_start: '2025-02-14'
+        actual_end: '2025-02-16'
+        hours: '3.50'
+        planned_cost: '69.13'
+        actual_cost: '69.13'
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-02-05'
+        planned_end: '2025-02-16'
+        actual_start: '2025-02-14'
+        actual_end: '2025-02-16'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '10.60'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '171.04'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '171.04'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - HL Road Handlebars
+      - - product_number
+        - HB-R956
+      - - order_qty
+        - 2
+      - - stocked_qty
+        - 2
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/f1da6dc804e4bd31
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/f1da6dc804e4bd31.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-51201
+    issue_date: '2024-11-07'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2024-11-18'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2024-11-29'
+    items:
+    - sku: '1'
+      description: Frame Forming
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-11-07'
+        planned_end: '2024-11-18'
+        actual_start: '2024-11-07'
+        actual_end: '2024-11-29'
+        hours: '4.10'
+        planned_cost: '72.88'
+        actual_cost: '72.88'
+    - sku: '2'
+      description: Frame Welding
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-11-07'
+        planned_end: '2024-11-18'
+        actual_start: '2024-11-07'
+        actual_end: '2024-11-29'
+        hours: '3.50'
+        planned_cost: '69.13'
+        actual_cost: '69.13'
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-11-07'
+        planned_end: '2024-11-18'
+        actual_start: '2024-11-07'
+        actual_end: '2024-11-29'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '10.60'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '171.04'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '171.04'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - LL Touring Handlebars
+      - - product_number
+        - HB-T721
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/37d33f81b58628a1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/37d33f81b58628a1.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-2356
+    issue_date: '2022-07-30'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2022-08-10'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2022-08-11'
+    items:
+    - sku: '7'
+      description: Final Assembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2022-07-30'
+        planned_end: '2022-08-10'
+        actual_start: '2022-08-20'
+        actual_end: '2022-09-01'
+        hours: '4.00'
+        planned_cost: '38.71'
+        actual_cost: '38.71'
+    summary:
+    - label: total_hours
+      value: '4.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - Road-150 Red, 56
+      - - product_number
+        - BK-R93R-56
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/e0d829991e72f30d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/e0d829991e72f30d.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-57133
+    issue_date: '2025-01-05'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-01-16'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-01-16'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-01-05'
+        planned_end: '2025-01-16'
+        actual_start: '2025-01-12'
+        actual_end: '2025-01-16'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - HL Road Front Wheel
+      - - product_number
+        - FW-R820
+      - - order_qty
+        - 2
+      - - stocked_qty
+        - 2
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/0658628b8ef28a49
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/0658628b8ef28a49.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-22224
+    issue_date: '2023-09-25'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2023-10-06'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2023-10-13'
+    items:
+    - sku: '1'
+      description: Frame Forming
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-09-25'
+        planned_end: '2023-10-06'
+        actual_start: '2023-10-12'
+        actual_end: '2023-10-13'
+        hours: '4.10'
+        planned_cost: '72.88'
+        actual_cost: '72.88'
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-09-25'
+        planned_end: '2023-10-06'
+        actual_start: '2023-10-12'
+        actual_end: '2023-10-13'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '7.10'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '101.91'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '101.91'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - LL Fork
+      - - product_number
+        - FK-1639
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/e5cf0e84da7d0821
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/e5cf0e84da7d0821.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-2388
+    issue_date: '2022-07-31'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2022-08-11'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2022-08-11'
+    items:
+    - sku: '7'
+      description: Final Assembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2022-07-31'
+        planned_end: '2022-08-11'
+        actual_start: '2022-08-01'
+        actual_end: '2022-08-11'
+        hours: '4.00'
+        planned_cost: '38.71'
+        actual_cost: '38.71'
+    summary:
+    - label: total_hours
+      value: '4.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - Road-650 Black, 52
+      - - product_number
+        - BK-R50B-52
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/d33e230fc660b13a
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/d33e230fc660b13a.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-12568
+    issue_date: '2023-03-22'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2023-04-02'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2023-04-02'
+    items:
+    - sku: '1'
+      description: Frame Forming
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-03-22'
+        planned_end: '2023-04-02'
+        actual_start: '2023-04-04'
+        actual_end: '2023-04-15'
+        hours: '4.10'
+        planned_cost: '72.88'
+        actual_cost: '72.88'
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-03-22'
+        planned_end: '2023-04-02'
+        actual_start: '2023-04-04'
+        actual_end: '2023-04-15'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '7.10'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '101.91'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '101.91'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - LL Fork
+      - - product_number
+        - FK-1639
+      - - order_qty
+        - 2
+      - - stocked_qty
+        - 2
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/4604b22514303b89
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/4604b22514303b89.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-55944
+    issue_date: '2024-12-25'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-01-05'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-01-12'
+    items:
+    - sku: '7'
+      description: Final Assembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-12-25'
+        planned_end: '2025-01-05'
+        actual_start: '2025-01-11'
+        actual_end: '2025-01-12'
+        hours: '4.00'
+        planned_cost: '38.71'
+        actual_cost: '38.71'
+    summary:
+    - label: total_hours
+      value: '4.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - Road-750 Black, 44
+      - - product_number
+        - BK-R19B-44
+      - - order_qty
+        - 3
+      - - stocked_qty
+        - 3
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/f957cbd1dd69c388
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/f957cbd1dd69c388.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-38973
+    issue_date: '2024-06-29'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2024-07-10'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2024-07-10'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-06-29'
+        planned_end: '2024-07-10'
+        actual_start: '2024-06-30'
+        actual_end: '2024-07-10'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - HL Headset
+      - - product_number
+        - HS-3479
+      - - order_qty
+        - 3
+      - - stocked_qty
+        - 3
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/d55fe18a533d9d8d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/d55fe18a533d9d8d.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-56361
+    issue_date: '2024-12-29'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-01-09'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-01-10'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-12-29'
+        planned_end: '2025-01-09'
+        actual_start: '2025-01-19'
+        actual_end: '2025-01-31'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - HL Road Front Wheel
+      - - product_number
+        - FW-R820
+      - - order_qty
+        - 3
+      - - stocked_qty
+        - 3
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/6f611a000de14474
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/6f611a000de14474.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-45178
+    issue_date: '2024-09-06'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2024-09-17'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2024-09-17'
+    items:
+    - sku: '7'
+      description: Final Assembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-09-06'
+        planned_end: '2024-09-17'
+        actual_start: '2024-09-15'
+        actual_end: '2024-09-17'
+        hours: '4.00'
+        planned_cost: '38.71'
+        actual_cost: '38.71'
+    summary:
+    - label: total_hours
+      value: '4.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - Mountain-400-W Silver, 46
+      - - product_number
+        - BK-M38S-46
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/892ada8c1cfce7d8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/892ada8c1cfce7d8.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-60984
+    issue_date: '2025-02-13'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-02-24'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-02-24'
+    items:
+    - sku: '7'
+      description: Final Assembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-02-13'
+        planned_end: '2025-02-24'
+        actual_start: '2025-02-20'
+        actual_end: '2025-02-24'
+        hours: '4.00'
+        planned_cost: '38.71'
+        actual_cost: '38.71'
+    summary:
+    - label: total_hours
+      value: '4.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '38.71'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - Mountain-200 Silver, 46
+      - - product_number
+        - BK-M68S-46
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/5aedb5e867f82977
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/5aedb5e867f82977.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-18502
+    issue_date: '2023-07-18'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2023-07-29'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2023-07-29'
+    items:
+    - sku: '1'
+      description: Frame Forming
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-07-18'
+        planned_end: '2023-07-29'
+        actual_start: '2023-07-27'
+        actual_end: '2023-07-29'
+        hours: '4.10'
+        planned_cost: '72.88'
+        actual_cost: '72.88'
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-07-18'
+        planned_end: '2023-07-29'
+        actual_start: '2023-07-27'
+        actual_end: '2023-07-29'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '7.10'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '101.91'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '101.91'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - LL Fork
+      - - product_number
+        - FK-1639
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/59b10cd0af7f8788
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/59b10cd0af7f8788.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: WO-50861
+    issue_date: '2024-11-04'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2024-11-15'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2024-11-15'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2024-11-04'
+        planned_end: '2024-11-15'
+        actual_start: '2024-11-11'
+        actual_end: '2024-11-15'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - LL Bottom Bracket
+      - - product_number
+        - BB-7421
+      - - order_qty
+        - 21
+      - - stocked_qty
+        - 21
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/a81f6feec6fe6097
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/a81f6feec6fe6097.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-10485
+    issue_date: '2023-02-03'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2023-02-14'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2023-02-14'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2023-02-03'
+        planned_end: '2023-02-14'
+        actual_start: '2023-02-10'
+        actual_end: '2023-02-14'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - ML Crankset
+      - - product_number
+        - CS-6583
+      - - order_qty
+        - 1
+      - - stocked_qty
+        - 1
+      - - scrapped_qty
+        - 0
+  evaluators: []
+- name: work_order/2605d2471a6161a4
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/2605d2471a6161a4.pdf
+    doc_type: work_order
+  metadata: null
+  expected_output:
+    doc_type: work_order
+    number: MC-WO-60571
+    issue_date: '2025-02-08'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: '2025-02-19'
+      delivery_date: null
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: '2025-03-04'
+    items:
+    - sku: '6'
+      description: Subassembly
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: null
+      line_total: '0.00'
+      extra:
+        planned_start: '2025-02-08'
+        planned_end: '2025-02-19'
+        actual_start: '2025-02-08'
+        actual_end: '2025-03-04'
+        hours: '3.00'
+        planned_cost: '29.03'
+        actual_cost: '29.03'
+    summary:
+    - label: total_hours
+      value: '3.00'
+      fmt: number
+      strong: false
+    - label: total_planned_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: total_actual_cost
+      value: '29.03'
+      fmt: money
+      strong: false
+    - label: variance
+      value: '0.00'
+      fmt: money
+      strong: true
+    notes: null
+    extra:
+      product:
+      - - product
+        - HL Bottom Bracket
+      - - product_number
+        - BB-9108
+      - - order_qty
+        - 5
+      - - stocked_qty
+        - 5
+      - - scrapped_qty
+        - 0
+  evaluators: []
+evaluators:
+- ExtractionMetrics
+report_evaluators:
+- ExtractionMetricsReport

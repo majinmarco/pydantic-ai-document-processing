@@ -1,0 +1,2417 @@
+# yaml-language-server: $schema=extraction-purchase_order_schema.json
+name: extraction-purchase_order
+cases:
+- name: purchase_order/0cc06330a66a25d0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0cc06330a66a25d0.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2022-2522815
+    issue_date: '2022-11-03'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Norske Meierier
+        address:
+          line1: Hatlevegen 5
+          line2: null
+          city: Sandvika
+          region: null
+          postal_code: '1320'
+          country: Norway
+        phone: (0)2-953010
+        email: null
+        website: null
+        tax_id: null
+        code: '15'
+        bank: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2022-11-05'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: United Package
+      account_number: '15'
+      requested_by: Steven Buchanan
+    items:
+    - sku: '033'
+      description: Geitost
+      quantity: '1'
+      unit_price: '2.30'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 500 g
+      line_total: '2.30'
+      extra:
+        category: Dairy Products
+    - sku: 069
+      description: Gudbrandsdalsost
+      quantity: '22'
+      unit_price: '33.12'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 kg pkg.
+      line_total: '728.64'
+      extra:
+        category: Dairy Products
+    totals:
+      currency: EUR
+      subtotal: '730.94'
+      gross: '730.94'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes: null
+      tax_total: '0.00'
+      total: '730.94'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Beate Vileid
+      payment_terms: 30 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/345d39c36ae82ce0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/345d39c36ae82ce0.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2022-136996
+    issue_date: '2022-10-22'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Mayumi's
+        address:
+          line1: 92 Setsuko Chuo-ku
+          line2: null
+          city: Osaka
+          region: Eastern Asia
+          postal_code: '545'
+          country: Japan
+        phone: (06) 431-7877
+        email: null
+        website: null
+        tax_id: null
+        code: '6'
+        bank: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2022-10-28'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '6'
+      requested_by: Anne Dodsworth
+    items:
+    - sku: '014'
+      description: Tofu
+      quantity: '26'
+      unit_price: '21.39'
+      discount_rate: '0.00'
+      tax_rate: '0.055'
+      unit: 40 - 100 g pkgs.
+      line_total: '556.14'
+      extra:
+        category: Produce
+    totals:
+      currency: EUR
+      subtotal: '556.14'
+      gross: '556.14'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.055'
+        base: '556.14'
+        amount: '30.59'
+        name: null
+      tax_total: '30.59'
+      total: '586.73'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Mayumi Ohno
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/237b40c35b0133cb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/237b40c35b0133cb.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2014-249341
+    issue_date: '2014-10-31'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Exotic Liquids
+        address:
+          line1: 49 Gilbert St.
+          line2: null
+          city: London
+          region: null
+          postal_code: EC1 4SD
+          country: UK
+        phone: (171) 555-2222
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+      deliver_to:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2014-11-15'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '1'
+      requested_by: Steven Buchanan
+    items:
+    - sku: '001'
+      description: Chai
+      quantity: '39'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 10 boxes x 20 bags
+      line_total: '645.84'
+      extra:
+        category: Beverages
+    - sku: '002'
+      description: Chang
+      quantity: '26'
+      unit_price: '17.48'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 24 - 12 oz bottles
+      line_total: '454.48'
+      extra:
+        category: Beverages
+    totals:
+      currency: EUR
+      subtotal: '1100.32'
+      gross: '1100.32'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '1100.32'
+        amount: '220.06'
+        name: null
+      tax_total: '220.06'
+      total: '1320.38'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Charlotte Cooper
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/18001fff63f6dea9
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/18001fff63f6dea9.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2015-134129
+    issue_date: '2015-04-22'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: PB Knäckebröd AB
+        address:
+          line1: Kaloadagatan 13
+          line2: null
+          city: Göteborg
+          region: null
+          postal_code: S-345 67
+          country: Sweden
+        phone: 031-987 65 43
+        email: null
+        website: null
+        tax_id: null
+        code: '9'
+        bank: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2015-04-25'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '9'
+      requested_by: Steven Buchanan
+    items:
+    - sku: '022'
+      description: Gustaf's Knäckebröd
+      quantity: '47'
+      unit_price: '19.32'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 500 g pkgs.
+      line_total: '908.04'
+      extra:
+        category: Grains/Cereals
+    - sku: '023'
+      description: Tunnbröd
+      quantity: '41'
+      unit_price: '8.28'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 250 g pkgs.
+      line_total: '339.48'
+      extra:
+        category: Grains/Cereals
+    totals:
+      currency: EUR
+      subtotal: '1247.52'
+      gross: '1247.52'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes: null
+      tax_total: '0.00'
+      total: '1247.52'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Lars Peterson
+          fax: 031-987 65 91
+      payment_terms: 45 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/54046f9e28d68deb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/54046f9e28d68deb.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2014-1908225
+    issue_date: '2014-01-08'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Ma Maison
+        address:
+          line1: 2960 Rue St. Laurent
+          line2: null
+          city: Montréal
+          region: null
+          postal_code: H1J 1C3
+          country: Canada
+        phone: (514) 555-9022
+        email: null
+        website: null
+        tax_id: null
+        code: '25'
+        bank: null
+      deliver_to:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2014-01-18'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '25'
+      requested_by: Michael Suyama
+    items:
+    - sku: '054'
+      description: Tourtière
+      quantity: '23'
+      unit_price: '6.85'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 16 pies
+      line_total: '157.55'
+      extra:
+        category: Meat/Poultry
+    - sku: '055'
+      description: Pâté chinois
+      quantity: '26'
+      unit_price: '22.08'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 boxes x 2 pies
+      line_total: '574.08'
+      extra:
+        category: Meat/Poultry
+    totals:
+      currency: EUR
+      subtotal: '731.63'
+      gross: '731.63'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes: null
+      tax_total: '0.00'
+      total: '731.63'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Jean-Guy Lauzon
+      payment_terms: 45 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/4e3775a5410d325b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/4e3775a5410d325b.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2016-2087418
+    issue_date: '2016-06-26'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Aux joyeux ecclésiastiques
+        address:
+          line1: 203, Rue des Francs-Bourgeois
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75004'
+          country: France
+        phone: (1) 03.83.00.68
+        email: null
+        website: null
+        tax_id: null
+        code: '18'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2016-07-01'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '18'
+      requested_by: Steven Buchanan
+    items:
+    - sku: 038
+      description: Côte de Blaye
+      quantity: '40'
+      unit_price: '242.42'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 12 - 75 cl bottles
+      line_total: '9696.80'
+      extra:
+        category: Beverages
+    - sku: 039
+      description: Chartreuse verte
+      quantity: '35'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 750 cc per bottle
+      line_total: '579.60'
+      extra:
+        category: Beverages
+    totals:
+      currency: EUR
+      subtotal: '10276.40'
+      gross: '10276.40'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '10276.40'
+        amount: '2055.28'
+        name: null
+      tax_total: '2055.28'
+      total: '12331.68'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Guylène Nodier
+          fax: (1) 03.83.00.62
+      payment_terms: 30 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/7e1f5de777a2fc3f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/7e1f5de777a2fc3f.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2015-1916613
+    issue_date: '2015-07-31'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Nord-Ost-Fisch Handelsgesellschaft mbH
+        address:
+          line1: Frahmredder 112a
+          line2: null
+          city: Cuxhaven
+          region: null
+          postal_code: '27478'
+          country: Germany
+        phone: (04721) 8713
+        email: null
+        website: null
+        tax_id: null
+        code: '13'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2015-08-14'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '13'
+      requested_by: Steven Buchanan
+    items:
+    - sku: '030'
+      description: Nord-Ost Matjeshering
+      quantity: '3'
+      unit_price: '23.82'
+      discount_rate: '0.00'
+      tax_rate: '0.055'
+      unit: 10 - 200 g glasses
+      line_total: '71.46'
+      extra:
+        category: Seafood
+    totals:
+      currency: EUR
+      subtotal: '71.46'
+      gross: '71.46'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.055'
+        base: '71.46'
+        amount: '3.93'
+        name: null
+      tax_total: '3.93'
+      total: '75.39'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Sven Petersen
+          fax: (04721) 8714
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/db1726096b2ff47f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/db1726096b2ff47f.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2023-2452116
+    issue_date: '2023-02-24'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Bigfoot Breweries
+        address:
+          line1: 3400 - 8th Avenue Suite 210
+          line2: null
+          city: Bend
+          region: null
+          postal_code: '97101'
+          country: USA
+        phone: (503) 555-9931
+        email: null
+        website: null
+        tax_id: null
+        code: '16'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2023-02-27'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: United Package
+      account_number: '16'
+      requested_by: Andrew Fuller
+    items:
+    - sku: '035'
+      description: Steeleye Stout
+      quantity: '22'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 24 - 12 oz bottles
+      line_total: '364.32'
+      extra:
+        category: Beverages
+    totals:
+      currency: EUR
+      subtotal: '364.32'
+      gross: '364.32'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '364.32'
+        amount: '72.86'
+        name: null
+      tax_total: '72.86'
+      total: '437.18'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Cheryl Saylor
+      payment_terms: 30 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/bcfa8415c803c753
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/bcfa8415c803c753.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2013-1385320
+    issue_date: '2013-01-06'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Leka Trading
+        address:
+          line1: '471 Serangoon Loop, Suite #402'
+          line2: null
+          city: Singapore
+          region: South-East Asia
+          postal_code: '0512'
+          country: Singapore
+        phone: 555-8787
+        email: null
+        website: null
+        tax_id: null
+        code: '20'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2013-01-20'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: United Package
+      account_number: '20'
+      requested_by: Margaret Peacock
+    items:
+    - sku: '042'
+      description: Singaporean Hokkien Fried Mee
+      quantity: '24'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 32 - 1 kg pkgs.
+      line_total: '309.12'
+      extra:
+        category: Grains/Cereals
+    totals:
+      currency: EUR
+      subtotal: '309.12'
+      gross: '309.12'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '309.12'
+        amount: '61.82'
+        name: null
+      tax_total: '61.82'
+      total: '370.94'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Chandra Leka
+      payment_terms: 45 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/28951688dccbc78d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/28951688dccbc78d.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2021-1654117
+    issue_date: '2021-12-23'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Svensk Sjöföda AB
+        address:
+          line1: Brovallavägen 231
+          line2: null
+          city: Stockholm
+          region: null
+          postal_code: S-123 45
+          country: Sweden
+        phone: 08-123 45 67
+        email: null
+        website: null
+        tax_id: null
+        code: '17'
+        bank: null
+      deliver_to:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2021-12-23'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: United Package
+      account_number: '17'
+      requested_by: Andrew Fuller
+    items:
+    - sku: '036'
+      description: Inlagd Sill
+      quantity: '27'
+      unit_price: '17.48'
+      discount_rate: '0.00'
+      tax_rate: '0.055'
+      unit: 24 - 250 g jars
+      line_total: '471.96'
+      extra:
+        category: Seafood
+    - sku: '073'
+      description: Röd Kaviar
+      quantity: '48'
+      unit_price: '13.80'
+      discount_rate: '0.00'
+      tax_rate: '0.055'
+      unit: 24 - 150 g jars
+      line_total: '662.40'
+      extra:
+        category: Seafood
+    totals:
+      currency: EUR
+      subtotal: '1134.36'
+      gross: '1134.36'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.055'
+        base: '1134.36'
+        amount: '62.39'
+        name: null
+      tax_total: '62.39'
+      total: '1196.75'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Michael Björn
+      payment_terms: 30 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/2679aba89749ed5e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/2679aba89749ed5e.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2017-2030020
+    issue_date: '2017-05-05'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Leka Trading
+        address:
+          line1: '471 Serangoon Loop, Suite #402'
+          line2: null
+          city: Singapore
+          region: South-East Asia
+          postal_code: '0512'
+          country: Singapore
+        phone: 555-8787
+        email: null
+        website: null
+        tax_id: null
+        code: '20'
+        bank: null
+      deliver_to:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2017-05-22'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: United Package
+      account_number: '20'
+      requested_by: Margaret Peacock
+    items:
+    - sku: '042'
+      description: Singaporean Hokkien Fried Mee
+      quantity: '15'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 32 - 1 kg pkgs.
+      line_total: '193.20'
+      extra:
+        category: Grains/Cereals
+    - sku: '043'
+      description: Ipoh Coffee
+      quantity: '42'
+      unit_price: '42.32'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 16 - 500 g tins
+      line_total: '1777.44'
+      extra:
+        category: Beverages
+    - sku: '044'
+      description: Gula Malacca
+      quantity: '10'
+      unit_price: '17.89'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 20 - 2 kg bags
+      line_total: '178.90'
+      extra:
+        category: Condiments
+    totals:
+      currency: EUR
+      subtotal: '2149.54'
+      gross: '2149.54'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '2149.54'
+        amount: '429.91'
+        name: null
+      tax_total: '429.91'
+      total: '2579.45'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Chandra Leka
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/8eeacc448e085259
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/8eeacc448e085259.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2016-235624
+    issue_date: '2016-08-13'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Tokyo Traders
+        address:
+          line1: 9-8 Sekimai Musashino-shi
+          line2: null
+          city: Tokyo
+          region: Eastern Asia
+          postal_code: '100'
+          country: Japan
+        phone: (03) 3555-5011
+        email: null
+        website: null
+        tax_id: null
+        code: '4'
+        bank: null
+      deliver_to:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2016-08-28'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Federal Shipping
+      account_number: '4'
+      requested_by: Andrew Fuller
+    items:
+    - sku: 009
+      description: Mishi Kobe Niku
+      quantity: '23'
+      unit_price: '89.24'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 18 - 500 g pkgs.
+      line_total: '2052.52'
+      extra:
+        category: Meat/Poultry
+    - sku: '010'
+      description: Ikura
+      quantity: '20'
+      unit_price: '28.52'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 12 - 200 ml jars
+      line_total: '570.40'
+      extra:
+        category: Seafood
+    totals:
+      currency: EUR
+      subtotal: '2622.92'
+      gross: '2622.92'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '2622.92'
+        amount: '524.58'
+        name: null
+      tax_total: '524.58'
+      total: '3147.50'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Yoshi Nagase
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/a109439d241d995b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/a109439d241d995b.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2018-189358
+    issue_date: '2018-11-18'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Specialty Biscuits, Ltd.
+        address:
+          line1: 29 King's Way
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M14 GSD
+          country: UK
+        phone: (161) 555-4448
+        email: null
+        website: null
+        tax_id: null
+        code: '8'
+        bank: null
+      deliver_to:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2019-01-08'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '8'
+      requested_by: Michael Suyama
+    items:
+    - sku: 019
+      description: Teatime Chocolate Biscuits
+      quantity: '26'
+      unit_price: '8.46'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 10 boxes x 12 pieces
+      line_total: '219.96'
+      extra:
+        category: Confections
+    - sku: '020'
+      description: Sir Rodney's Marmalade
+      quantity: '28'
+      unit_price: '74.52'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 30 gift boxes
+      line_total: '2086.56'
+      extra:
+        category: Confections
+    - sku: '021'
+      description: Sir Rodney's Scones
+      quantity: '24'
+      unit_price: '9.20'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 24 pkgs. x 4 pieces
+      line_total: '220.80'
+      extra:
+        category: Confections
+    totals:
+      currency: EUR
+      subtotal: '2527.32'
+      gross: '2527.32'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '2527.32'
+        amount: '505.46'
+        name: null
+      tax_total: '505.46'
+      total: '3032.78'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Peter Wilson
+      payment_terms: 30 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/cac85205a969e70a
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/cac85205a969e70a.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2016-1358725
+    issue_date: '2016-02-29'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Ma Maison
+        address:
+          line1: 2960 Rue St. Laurent
+          line2: null
+          city: Montréal
+          region: null
+          postal_code: H1J 1C3
+          country: Canada
+        phone: (514) 555-9022
+        email: null
+        website: null
+        tax_id: null
+        code: '25'
+        bank: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2016-03-02'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Federal Shipping
+      account_number: '25'
+      requested_by: Andrew Fuller
+    items:
+    - sku: '055'
+      description: Pâté chinois
+      quantity: '4'
+      unit_price: '22.08'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 24 boxes x 2 pies
+      line_total: '88.32'
+      extra:
+        category: Meat/Poultry
+    totals:
+      currency: EUR
+      subtotal: '88.32'
+      gross: '88.32'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '88.32'
+        amount: '17.66'
+        name: null
+      tax_total: '17.66'
+      total: '105.98'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Jean-Guy Lauzon
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/0cf180e23fd2ed88
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0cf180e23fd2ed88.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: AC-PO-2526
+    issue_date: '2025-04-07'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Carlson Specialties
+        address:
+          line1: 2313 B Southampton Rd
+          line2: null
+          city: Missoula
+          region: MT
+          postal_code: '59801'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: CARLSON0001
+        bank: null
+      deliver_to:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2025-04-16'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Cargo Transport 5
+      account_number: CARLSON0001
+      requested_by: Reinout Hillmann
+    items:
+    - sku: PA-187B
+      description: Paint - Black
+      quantity: '60'
+      unit_price: '39.71'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '2382.60'
+      extra:
+        received: 51
+        rejected: 0
+        stocked: 51
+        due_date: '2025-04-21'
+    - sku: PA-361R
+      description: Paint - Red
+      quantity: '60'
+      unit_price: '45.15'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '2709.00'
+      extra:
+        received: 60
+        rejected: 0
+        stocked: 60
+        due_date: '2025-04-21'
+    - sku: PA-529S
+      description: Paint - Silver
+      quantity: '60'
+      unit_price: '42.03'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '2521.80'
+      extra:
+        received: 60
+        rejected: 0
+        stocked: 60
+        due_date: '2025-04-21'
+    - sku: PA-632U
+      description: Paint - Blue
+      quantity: '60'
+      unit_price: '50.32'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: EA
+      line_total: '3019.20'
+      extra:
+        received: 60
+        rejected: 0
+        stocked: 60
+        due_date: '2025-04-21'
+    totals:
+      currency: GBP
+      subtotal: '10632.60'
+      gross: '10632.60'
+      discount_total: '0.00'
+      freight: '265.81'
+      taxes:
+      - rate: '0.0800'
+        base: '10632.60'
+        amount: '850.59'
+        name: null
+      tax_total: '850.59'
+      total: '11749.00'
+    notes: null
+    extra:
+      payment_terms: Net 60 days
+      instructions: Please confirm this order and quote our PO number on all invoices
+        and delivery notes.
+  evaluators: []
+- name: purchase_order/7c6b17244a7060b1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/7c6b17244a7060b1.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2022-131184
+    issue_date: '2022-04-03'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Tokyo Traders
+        address:
+          line1: 9-8 Sekimai Musashino-shi
+          line2: null
+          city: Tokyo
+          region: Eastern Asia
+          postal_code: '100'
+          country: Japan
+        phone: (03) 3555-5011
+        email: null
+        website: null
+        tax_id: null
+        code: '4'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2022-04-23'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '4'
+      requested_by: Robert King
+    items:
+    - sku: '010'
+      description: Ikura
+      quantity: '3'
+      unit_price: '28.52'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 12 - 200 ml jars
+      line_total: '85.56'
+      extra:
+        category: Seafood
+    totals:
+      currency: EUR
+      subtotal: '85.56'
+      gross: '85.56'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '85.56'
+        amount: '17.11'
+        name: null
+      tax_total: '17.11'
+      total: '102.67'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Yoshi Nagase
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/fc233a1b97b103fe
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/fc233a1b97b103fe.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2014-259561
+    issue_date: '2014-02-28'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Exotic Liquids
+        address:
+          line1: 49 Gilbert St.
+          line2: null
+          city: London
+          region: null
+          postal_code: EC1 4SD
+          country: UK
+        phone: (171) 555-2222
+        email: null
+        website: null
+        tax_id: null
+        code: '1'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2014-03-01'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Federal Shipping
+      account_number: '1'
+      requested_by: Margaret Peacock
+    items:
+    - sku: '001'
+      description: Chai
+      quantity: '20'
+      unit_price: '16.56'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 10 boxes x 20 bags
+      line_total: '331.20'
+      extra:
+        category: Beverages
+    - sku: '002'
+      description: Chang
+      quantity: '42'
+      unit_price: '17.48'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '734.16'
+      extra:
+        category: Beverages
+    - sku: '003'
+      description: Aniseed Syrup
+      quantity: '45'
+      unit_price: '9.20'
+      discount_rate: '0.00'
+      tax_rate: '0'
+      unit: 12 - 550 ml bottles
+      line_total: '414.00'
+      extra:
+        category: Condiments
+    totals:
+      currency: EUR
+      subtotal: '1479.36'
+      gross: '1479.36'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes: null
+      tax_total: '0.00'
+      total: '1479.36'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Charlotte Cooper
+      payment_terms: 45 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/0ae5fd74f2499a3e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0ae5fd74f2499a3e.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2021-1349620
+    issue_date: '2021-10-02'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Leka Trading
+        address:
+          line1: '471 Serangoon Loop, Suite #402'
+          line2: null
+          city: Singapore
+          region: South-East Asia
+          postal_code: '0512'
+          country: Singapore
+        phone: 555-8787
+        email: null
+        website: null
+        tax_id: null
+        code: '20'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2021-11-25'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: United Package
+      account_number: '20'
+      requested_by: Laura Callahan
+    items:
+    - sku: '042'
+      description: Singaporean Hokkien Fried Mee
+      quantity: '24'
+      unit_price: '12.88'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 32 - 1 kg pkgs.
+      line_total: '309.12'
+      extra:
+        category: Grains/Cereals
+    - sku: '043'
+      description: Ipoh Coffee
+      quantity: '17'
+      unit_price: '42.32'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 16 - 500 g tins
+      line_total: '719.44'
+      extra:
+        category: Beverages
+    - sku: '044'
+      description: Gula Malacca
+      quantity: '7'
+      unit_price: '17.89'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 20 - 2 kg bags
+      line_total: '125.23'
+      extra:
+        category: Condiments
+    totals:
+      currency: EUR
+      subtotal: '1153.79'
+      gross: '1153.79'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '1153.79'
+        amount: '230.76'
+        name: null
+      tax_total: '230.76'
+      total: '1384.55'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Chandra Leka
+      payment_terms: 60 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/8278a734bf640d2e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/8278a734bf640d2e.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2013-2314211
+    issue_date: '2013-07-23'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Heli Süßwaren GmbH & Co. KG
+        address:
+          line1: Tiergartenstraße 5
+          line2: null
+          city: Berlin
+          region: null
+          postal_code: '10785'
+          country: Germany
+        phone: (010) 9984510
+        email: null
+        website: null
+        tax_id: null
+        code: '11'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2013-08-07'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '11'
+      requested_by: Anne Dodsworth
+    items:
+    - sku: '026'
+      description: Gumbär Gummibärchen
+      quantity: '45'
+      unit_price: '28.73'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 100 - 250 g bags
+      line_total: '1292.85'
+      extra:
+        category: Confections
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '29'
+      unit_price: '40.39'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 100 - 100 g pieces
+      line_total: '1171.31'
+      extra:
+        category: Confections
+    totals:
+      currency: EUR
+      subtotal: '2464.16'
+      gross: '2464.16'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '2464.16'
+        amount: '492.83'
+        name: null
+      tax_total: '492.83'
+      total: '2956.99'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Petra Winkler
+      payment_terms: 45 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+- name: purchase_order/0d88f56aaf55f2c0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0d88f56aaf55f2c0.pdf
+    doc_type: purchase_order
+  metadata: null
+  expected_output:
+    doc_type: purchase_order
+    number: PO-2013-2180515
+    issue_date: '2013-07-07'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to: null
+      ship_to: null
+      vendor:
+        name: Norske Meierier
+        address:
+          line1: Hatlevegen 5
+          line2: null
+          city: Sandvika
+          region: null
+          postal_code: '1320'
+          country: Norway
+        phone: (0)2-953010
+        email: null
+        website: null
+        tax_id: null
+        code: '15'
+        bank: null
+      deliver_to:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      consignee: null
+      carrier: null
+    dates:
+      order_date: null
+      due_date: null
+      delivery_date: '2013-08-02'
+      valid_until: null
+      pickup_date: null
+      deliver_by: null
+      end_date: null
+    refs:
+      order_id: null
+      customer_id: null
+      po_number: null
+      carrier: Speedy Express
+      account_number: '15'
+      requested_by: Steven Buchanan
+    items:
+    - sku: '033'
+      description: Geitost
+      quantity: '26'
+      unit_price: '2.30'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 500 g
+      line_total: '59.80'
+      extra:
+        category: Dairy Products
+    - sku: 069
+      description: Gudbrandsdalsost
+      quantity: '44'
+      unit_price: '33.12'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 10 kg pkg.
+      line_total: '1457.28'
+      extra:
+        category: Dairy Products
+    - sku: '071'
+      description: Flotemysost
+      quantity: '7'
+      unit_price: '19.78'
+      discount_rate: '0.00'
+      tax_rate: '0.20'
+      unit: 10 - 500 g pkgs.
+      line_total: '138.46'
+      extra:
+        category: Dairy Products
+    totals:
+      currency: EUR
+      subtotal: '1655.54'
+      gross: '1655.54'
+      discount_total: '0.00'
+      freight: '0.00'
+      taxes:
+      - rate: '0.20'
+        base: '1655.54'
+        amount: '331.11'
+        name: null
+      tax_total: '331.11'
+      total: '1986.65'
+    notes: null
+    extra:
+      parties:
+        vendor:
+          contact: Beate Vileid
+      payment_terms: 30 jours net
+      instructions: Merci de confirmer cette commande et de rappeler notre numéro
+        sur vos factures et bons de livraison.
+  evaluators: []
+evaluators:
+- ExtractionMetrics
+report_evaluators:
+- ExtractionMetricsReport

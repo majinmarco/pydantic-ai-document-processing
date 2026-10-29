@@ -5,10 +5,13 @@ from dataclasses import dataclass, field
 from datetime import date, datetime
 from decimal import Decimal, InvalidOperation
 from math import isclose
-from typing import Any
+from pathlib import Path
+from typing import Any, cast
 
 from pydantic import BaseModel
+from pydantic_evals import Case, Dataset
 from pydantic_evals.evaluators import (
+    ConfusionMatrixEvaluator,
     EvaluationReason,
     Evaluator,
     EvaluatorContext,
@@ -16,6 +19,62 @@ from pydantic_evals.evaluators import (
     ReportEvaluatorContext,
 )
 from pydantic_evals.reporting.analyses import ScalarResult, TableResult
+
+from pydantic_ai_document_processing.schemas import DocumentClassification, DocumentType
+
+PACKAGE_ROOT = Path(__file__).resolve().parent
+CASES_DIR = PACKAGE_ROOT / "cases" / "datasets"
+
+
+class ClassificationInput(BaseModel):
+    pdf_path: Path
+
+
+class ExtractionInput(BaseModel):
+    pdf_path: Path
+    doc_type: DocumentType
+
+
+EvalMetadata = dict[str, Any]
+
+ClassificationCase = Case[ClassificationInput, DocumentClassification, EvalMetadata]
+ClassificationDataset = Dataset[ClassificationInput, DocumentClassification, EvalMetadata]
+
+
+def resolve_pdf_path(pdf_path: Path | str, *, root: Path = PACKAGE_ROOT) -> Path:
+    path = Path(pdf_path)
+    if not path.is_absolute():
+        path = root / path
+    return path
+
+
+def to_dataset_pdf_path(pdf_path: Path, *, root: Path = PACKAGE_ROOT) -> Path:
+    resolved = pdf_path.resolve()
+    try:
+        return resolved.relative_to(root.resolve())
+    except ValueError:
+        return resolved
+
+
+def typed_extraction_dataset[T: BaseModel](
+    schema: type[T],
+) -> type[Dataset[ExtractionInput, T, EvalMetadata]]:
+    """Specialize Dataset at runtime so YAML schema matches `schema`."""
+    return cast(
+        type[Dataset[ExtractionInput, T, EvalMetadata]],
+        Dataset[ExtractionInput, schema, dict[str, Any]],
+    )
+
+
+def classification_confusion_matrix() -> ConfusionMatrixEvaluator:
+    return ConfusionMatrixEvaluator(
+        predicted_from="labels",
+        predicted_key="predicted_type",
+        expected_from="labels",
+        expected_key="expected_type",
+        title="Document type confusion matrix",
+    )
+
 
 _LIST_ALIGN_KEYS = ("sku", "description", "rate", "label")
 _MAX_REASON_MISMATCHES = 8
@@ -445,13 +504,35 @@ def _doc_type_of(case: Any) -> str:
 
 
 @dataclass(repr=False)
-class ExtractionMetrics(Evaluator):
+class ClassificationMetrics(Evaluator[ClassificationInput, DocumentClassification, EvalMetadata]):
+    """Exact document-type match plus labels for a confusion matrix."""
+
+    def evaluate(
+        self,
+        ctx: EvaluatorContext[ClassificationInput, DocumentClassification, EvalMetadata],
+    ) -> dict[str, bool | str]:
+        expected = (
+            ctx.expected_output.document_type if ctx.expected_output is not None else None
+        )
+        predicted = ctx.output.document_type if ctx.output is not None else None
+        return {
+            "correct": expected is not None and expected == predicted,
+            "expected_type": expected or "unknown",
+            "predicted_type": predicted or "unknown",
+        }
+
+
+@dataclass(repr=False)
+class ExtractionMetrics(Evaluator[ExtractionInput, BaseModel, EvalMetadata]):
     """Field-level extraction scores for nested document schemas."""
 
     pass_threshold: float = 0.9
     numeric_rel_tol: float = 0.0
 
-    def evaluate(self, ctx: EvaluatorContext) -> dict[str, EvaluationReason | float | bool]:
+    def evaluate(
+        self,
+        ctx: EvaluatorContext[ExtractionInput, BaseModel, EvalMetadata],
+    ) -> dict[str, EvaluationReason | float | bool]:
         if ctx.expected_output is None or ctx.output is None:
             return {}
         comparison = compare_extractions(
@@ -471,12 +552,15 @@ class ExtractionMetrics(Evaluator):
 
 
 @dataclass(repr=False)
-class ExtractionMetricsReport(ReportEvaluator):
+class ExtractionMetricsReport(ReportEvaluator[ExtractionInput, BaseModel, EvalMetadata]):
     """Experiment-wide extraction F1 by schema section and document type."""
 
     numeric_rel_tol: float = 0.0
 
-    def evaluate(self, ctx: ReportEvaluatorContext) -> list[ScalarResult | TableResult]:
+    def evaluate(
+        self,
+        ctx: ReportEvaluatorContext[ExtractionInput, BaseModel, EvalMetadata],
+    ) -> list[ScalarResult | TableResult]:
         overall = Counts()
         sections: dict[str, Counts] = defaultdict(Counts)
         by_type: dict[str, Counts] = defaultdict(Counts)
@@ -534,3 +618,21 @@ class ExtractionMetricsReport(ReportEvaluator):
                 rows=type_rows,
             ),
         ]
+
+
+def load_classification_dataset(path: Path) -> ClassificationDataset:
+    return ClassificationDataset.from_file(
+        path,
+        custom_evaluator_types=[ClassificationMetrics],
+    )
+
+
+def load_extraction_dataset[T: BaseModel](
+    path: Path,
+    schema: type[T],
+) -> Dataset[ExtractionInput, T, EvalMetadata]:
+    return typed_extraction_dataset(schema).from_file(
+        path,
+        custom_evaluator_types=[ExtractionMetrics],
+        custom_report_evaluator_types=[ExtractionMetricsReport],
+    )

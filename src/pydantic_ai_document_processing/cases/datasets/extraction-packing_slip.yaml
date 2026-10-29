@@ -1,0 +1,3373 @@
+# yaml-language-server: $schema=extraction-packing_slip_schema.json
+name: extraction-packing_slip
+cases:
+- name: packing_slip/7223c8d3ddb04182
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/7223c8d3ddb04182.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: AC-BL-45734
+    issue_date: '2023-02-27'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Haley Powell
+        address:
+          line1: 418 Alfred Avenue
+          line2: null
+          city: Seattle
+          region: WA
+          postal_code: '98104'
+          country: United States
+        phone: 200-555-0198
+        email: haley27@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00011630
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO45734
+      customer_id: AW00011630
+      po_number: PO-1876
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R93R-56
+      description: Road-150 Red, 56
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '6.659'
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 6.66 kg
+      fmt: text
+      strong: false
+    - label: total_units
+      value: 1
+      fmt: int
+      strong: true
+    notes: Unused items may be returned within 14 days for a full refund.
+    extra: null
+  evaluators: []
+- name: packing_slip/cb16004c9224f84d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/cb16004c9224f84d.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN24052025
+    issue_date: '2024-07-09'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Austin Butler
+        address:
+          line1: 5058 Anchor Ave
+          line2: null
+          city: Rockhampton
+          region: QLD
+          postal_code: '4700'
+          country: Australia
+        phone: 1 (11) 500 555-0190
+        email: austin10@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00018293
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: AW00018293
+      po_number: PO-21963
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: FE-6654
+      description: Fender Set - Mountain
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Fenders
+        shipped: 1
+        backordered: 0
+    - sku: BC-M005
+      description: Mountain Bottle Cage
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Bottles and Cages
+        shipped: 1
+        backordered: 0
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Bottles and Cages
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 3
+      fmt: int
+      strong: true
+    notes: Overdue balances attract interest at five percent annually.
+    extra: null
+  evaluators: []
+- name: packing_slip/13e6e2e619585ac2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/13e6e2e619585ac2.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN17023510
+    issue_date: '2017-07-01'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Richter Supermarkt
+        address:
+          line1: Grenzacherweg 237
+          line2: null
+          city: Genève
+          region: null
+          postal_code: '1203'
+          country: Switzerland
+        phone: 0897-034214
+        email: null
+        website: null
+        tax_id: null
+        code: RICSU
+        bank: null
+      ship_to:
+        name: Bottom-Dollar Markets
+        address:
+          line1: 23 Tsawassen Blvd.
+          line2: null
+          city: Tsawassen
+          region: null
+          postal_code: T2F 8M4
+          country: Canada
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: RICSU
+      po_number: null
+      carrier: Federal Shipping
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '006'
+      description: Grandma's Boysenberry Spread
+      quantity: '19'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 8 oz jars
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 19
+        backordered: 0
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '9'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 100 - 100 g pieces
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 9
+        backordered: 0
+    - sku: '061'
+      description: Sirop d'érable
+      quantity: '40'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 500 ml bottles
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 40
+        backordered: 0
+    summary:
+    - label: packages
+      value: 2
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 68
+      fmt: int
+      strong: true
+    notes: Pénalités de 1,5 % par mois après échéance.
+    extra:
+      parties:
+        bill_to:
+          contact: Michael Holz
+      refs:
+        salesperson: Andrew Fuller
+  evaluators: []
+- name: packing_slip/9bace7281eca5861
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/9bace7281eca5861.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: AC-BL-60317
+    issue_date: '2024-11-22'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Abby Kapoor
+        address:
+          line1: 2749 Greenbush Drive
+          line2: null
+          city: North Ryde
+          region: NSW
+          postal_code: '2113'
+          country: Australia
+        phone: 1 (11) 500 555-0189
+        email: abby0@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00029054
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO60317
+      customer_id: AW00029054
+      po_number: PO-28023
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-T18U-54
+      description: Touring-3000 Blue, 54
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Touring Bikes
+        weight: '13.463'
+        shipped: 1
+        backordered: 0
+    - sku: BC-R205
+      description: Road Bottle Cage
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Bottles and Cages
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 13.46 kg
+      fmt: text
+      strong: false
+    - label: total_units
+      value: 2
+      fmt: int
+      strong: true
+    notes: Late payments incur a 1.5% monthly interest after the due date.
+    extra: null
+  evaluators: []
+- name: packing_slip/93673d66418704ea
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/93673d66418704ea.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN18013690
+    issue_date: '2018-07-16'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Antonio Moreno Taquería
+        address:
+          line1: Mataderos 2312
+          line2: null
+          city: México D.F.
+          region: null
+          postal_code: '05023'
+          country: Mexico
+        phone: (5) 555-3932
+        email: null
+        website: null
+        tax_id: null
+        code: ANTON
+        bank: null
+      ship_to:
+        name: Maison Dewey
+        address:
+          line1: Rue Joseph-Bens 532
+          line2: null
+          city: Bruxelles
+          region: null
+          postal_code: B-1180
+          country: Belgium
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: ANTON
+      po_number: PO-95633
+      carrier: United Package
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '004'
+      description: Chef Anton's Cajun Seasoning
+      quantity: '45'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 48 - 6 oz jars
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 45
+        backordered: 0
+    - sku: '015'
+      description: Genen Shouyu
+      quantity: '9'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 250 ml bottles
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 9
+        backordered: 0
+    - sku: 029
+      description: Thüringer Rostbratwurst
+      quantity: '31'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 50 bags x 30 sausgs.
+      line_total: '0.00'
+      extra:
+        category: Meat/Poultry
+        shipped: 31
+        backordered: 0
+    - sku: '040'
+      description: Boston Crab Meat
+      quantity: '34'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 4 oz tins
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 34
+        backordered: 0
+    - sku: '041'
+      description: Jack's New England Clam Chowder
+      quantity: '47'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 12 oz cans
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 47
+        backordered: 0
+    - sku: '067'
+      description: Laughing Lumberjack Lager
+      quantity: '20'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 13
+        backordered: 7
+    summary:
+    - label: packages
+      value: 4
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 179
+      fmt: int
+      strong: true
+    notes: Conservez les produits au frais selon étiquette.
+    extra:
+      parties:
+        bill_to:
+          contact: Antonio Moreno
+      refs:
+        salesperson: Michael Suyama
+  evaluators: []
+- name: packing_slip/175de1cba82d21eb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/175de1cba82d21eb.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN24052782
+    issue_date: '2024-07-24'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Susan Guo
+        address:
+          line1: 9534 Country View Lane
+          line2: null
+          city: Caloundra
+          region: QLD
+          postal_code: '4551'
+          country: Australia
+        phone: 1 (11) 500 555-0162
+        email: susan28@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00026543
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: AW00026543
+      po_number: null
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: TT-R982
+      description: Road Tire Tube
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Tires and Tubes
+        shipped: 1
+        backordered: 0
+    - sku: PK-7098
+      description: Patch Kit/8 Patches
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Tires and Tubes
+        shipped: 1
+        backordered: 0
+    - sku: CL-9009
+      description: Bike Wash - Dissolver
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Cleaners
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 3
+      fmt: int
+      strong: true
+    notes: Defective parts may be returned within ninety days.
+    extra: null
+  evaluators: []
+- name: packing_slip/82f45b44b0e2d293
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/82f45b44b0e2d293.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN19012090
+    issue_date: '2019-02-28'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Maison Dewey
+        address:
+          line1: Rue Joseph-Bens 532
+          line2: null
+          city: Bruxelles
+          region: null
+          postal_code: B-1180
+          country: Belgium
+        phone: (02) 201 24 67
+        email: null
+        website: null
+        tax_id: null
+        code: MAISD
+        bank: null
+      ship_to:
+        name: Familia Arquibaldo
+        address:
+          line1: Rua Orós, 92
+          line2: null
+          city: Sao Paulo
+          region: null
+          postal_code: 05442-030
+          country: Brazil
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: '12090'
+      customer_id: MAISD
+      po_number: null
+      carrier: Speedy Express
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '016'
+      description: Pavlova
+      quantity: '35'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 32 - 500 g boxes
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 35
+        backordered: 0
+    - sku: '024'
+      description: Guaraná Fantástica
+      quantity: '3'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 355 ml cans
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 3
+        backordered: 0
+    - sku: 028
+      description: Rössle Sauerkraut
+      quantity: '50'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 25 - 825 g cans
+      line_total: '0.00'
+      extra:
+        category: Produce
+        shipped: 50
+        backordered: 0
+    - sku: 029
+      description: Thüringer Rostbratwurst
+      quantity: '6'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 50 bags x 30 sausgs.
+      line_total: '0.00'
+      extra:
+        category: Meat/Poultry
+        shipped: 6
+        backordered: 0
+    - sku: '041'
+      description: Jack's New England Clam Chowder
+      quantity: '36'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 12 oz cans
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 36
+        backordered: 0
+    - sku: '047'
+      description: Zaanse koeken
+      quantity: '28'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 - 4 oz boxes
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 28
+        backordered: 0
+    - sku: '050'
+      description: Valkoinen suklaa
+      quantity: '43'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 100 g bars
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 43
+        backordered: 0
+    - sku: '060'
+      description: Camembert Pierrot
+      quantity: '31'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 15 - 300 g rounds
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 31
+        backordered: 0
+    - sku: '062'
+      description: Tarte au sucre
+      quantity: '33'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 48 pies
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 33
+        backordered: 0
+    - sku: '070'
+      description: Outback Lager
+      quantity: '30'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 355 ml bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 30
+        backordered: 0
+    - sku: '073'
+      description: Röd Kaviar
+      quantity: '42'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 150 g jars
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 42
+        backordered: 0
+    - sku: '077'
+      description: Original Frankfurter grüne Soße
+      quantity: '38'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 boxes
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 38
+        backordered: 0
+    summary:
+    - label: packages
+      value: 16
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 375
+      fmt: int
+      strong: true
+    notes: Conservez les produits au frais selon étiquette.
+    extra:
+      parties:
+        bill_to:
+          contact: Catherine Dewey
+          fax: (02) 201 24 68
+      refs:
+        salesperson: Andrew Fuller
+  evaluators: []
+- name: packing_slip/879daa312b2fffca
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/879daa312b2fffca.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN16017413
+    issue_date: '2016-01-09'
+    currency: EUR
+    parties:
+      issuer:
+        name: Riverside Commerce SA
+        address:
+          line1: 186, rue du Commerce
+          line2: null
+          city: Paris
+          region: null
+          postal_code: '75011'
+          country: France
+        phone: +33 4 46 16 12 65
+        email: sales@riversidecommerce.fr
+        website: www.riversidecommerce.fr
+        tax_id: TVA FR74936119826
+        code: FR
+        bank:
+          bank_name: First Commerce Bank
+          iban: FR17 4988 8298 5797 6547 0987
+          bic: RIVEFR33
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Victuailles en stock
+        address:
+          line1: 2, rue du Commerce
+          line2: null
+          city: Lyon
+          region: null
+          postal_code: '69004'
+          country: France
+        phone: 78.32.54.86
+        email: null
+        website: null
+        tax_id: null
+        code: VICTE
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: VICTE
+      po_number: null
+      carrier: Federal Shipping
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '001'
+      description: Chai
+      quantity: '34'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 boxes x 20 bags
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 34
+        backordered: 0
+    - sku: 008
+      description: Northwoods Cranberry Sauce
+      quantity: '21'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 12 oz jars
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 21
+        backordered: 0
+    - sku: 018
+      description: Carnarvon Tigers
+      quantity: '46'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 16 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 46
+        backordered: 0
+    - sku: 019
+      description: Teatime Chocolate Biscuits
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 boxes x 12 pieces
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 1
+        backordered: 0
+    - sku: 028
+      description: Rössle Sauerkraut
+      quantity: '14'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 25 - 825 g cans
+      line_total: '0.00'
+      extra:
+        category: Produce
+        shipped: 14
+        backordered: 0
+    - sku: '030'
+      description: Nord-Ost Matjeshering
+      quantity: '14'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 - 200 g glasses
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 14
+        backordered: 0
+    - sku: '034'
+      description: Sasquatch Ale
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 1
+        backordered: 0
+    - sku: '036'
+      description: Inlagd Sill
+      quantity: '35'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 250 g jars
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 35
+        backordered: 0
+    - sku: 039
+      description: Chartreuse verte
+      quantity: '29'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 750 cc per bottle
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 29
+        backordered: 0
+    - sku: '040'
+      description: Boston Crab Meat
+      quantity: '9'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 4 oz tins
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 9
+        backordered: 0
+    - sku: '044'
+      description: Gula Malacca
+      quantity: '7'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 20 - 2 kg bags
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 7
+        backordered: 0
+    - sku: 049
+      description: Maxilaku
+      quantity: '50'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 50 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 50
+        backordered: 0
+    - sku: '052'
+      description: Filo Mix
+      quantity: '41'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 16 - 2 kg boxes
+      line_total: '0.00'
+      extra:
+        category: Grains/Cereals
+        shipped: 41
+        backordered: 0
+    - sku: '060'
+      description: Camembert Pierrot
+      quantity: '38'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 15 - 300 g rounds
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 38
+        backordered: 0
+    - sku: '063'
+      description: Vegie-spread
+      quantity: '20'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 15 - 625 g jars
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 20
+        backordered: 0
+    - sku: '064'
+      description: Wimmers gute Semmelknödel
+      quantity: '47'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 20 bags x 4 pieces
+      line_total: '0.00'
+      extra:
+        category: Grains/Cereals
+        shipped: 47
+        backordered: 0
+    - sku: '070'
+      description: Outback Lager
+      quantity: '46'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 355 ml bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 46
+        backordered: 0
+    - sku: '071'
+      description: Flotemysost
+      quantity: '5'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 - 500 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 5
+        backordered: 0
+    - sku: '073'
+      description: Röd Kaviar
+      quantity: '45'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 150 g jars
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 45
+        backordered: 0
+    - sku: '077'
+      description: Original Frankfurter grüne Soße
+      quantity: '17'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 boxes
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 17
+        backordered: 0
+    summary:
+    - label: packages
+      value: 11
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 520
+      fmt: int
+      strong: true
+    notes: Contactez-nous pour toute question ou réclamation.
+    extra:
+      parties:
+        bill_to:
+          contact: Mary Saveley
+          fax: 78.32.54.87
+      refs:
+        salesperson: Andrew Fuller
+  evaluators: []
+- name: packing_slip/b9afce3b71b2eda8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/b9afce3b71b2eda8.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: ZT-BL-13349
+    issue_date: '2013-09-26'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Toms Spezialitäten
+        address:
+          line1: Luisenstr. 48
+          line2: null
+          city: Münster
+          region: null
+          postal_code: '44087'
+          country: Germany
+        phone: 0251-031259
+        email: null
+        website: null
+        tax_id: null
+        code: TOMSP
+        bank: null
+      ship_to:
+        name: Magazzini Alimentari Riuniti
+        address:
+          line1: Via Ludovico il Moro 22
+          line2: null
+          city: Bergamo
+          region: null
+          postal_code: '24100'
+          country: Italy
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: '13349'
+      customer_id: TOMSP
+      po_number: PO-22994
+      carrier: Speedy Express
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '004'
+      description: Chef Anton's Cajun Seasoning
+      quantity: '21'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 48 - 6 oz jars
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 21
+        backordered: 0
+    - sku: '006'
+      description: Grandma's Boysenberry Spread
+      quantity: '31'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 8 oz jars
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 31
+        backordered: 0
+    - sku: '020'
+      description: Sir Rodney's Marmalade
+      quantity: '12'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 30 gift boxes
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 12
+        backordered: 0
+    - sku: '025'
+      description: NuNuCa Nuß-Nougat-Creme
+      quantity: '43'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 20 - 450 g glasses
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 43
+        backordered: 0
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '18'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 100 - 100 g pieces
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 18
+        backordered: 0
+    - sku: '033'
+      description: Geitost
+      quantity: '12'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 500 g
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 12
+        backordered: 0
+    - sku: '036'
+      description: Inlagd Sill
+      quantity: '20'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 250 g jars
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 20
+        backordered: 0
+    - sku: '040'
+      description: Boston Crab Meat
+      quantity: '17'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 4 oz tins
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 17
+        backordered: 0
+    - sku: '046'
+      description: Spegesild
+      quantity: '47'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 4 - 450 g glasses
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 47
+        backordered: 0
+    - sku: '047'
+      description: Zaanse koeken
+      quantity: '32'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 - 4 oz boxes
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 32
+        backordered: 0
+    - sku: 048
+      description: Chocolade
+      quantity: '41'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 pkgs.
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 41
+        backordered: 0
+    - sku: '061'
+      description: Sirop d'érable
+      quantity: '36'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 500 ml bottles
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 36
+        backordered: 0
+    summary:
+    - label: packages
+      value: 7
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 330
+      fmt: int
+      strong: true
+    notes: Toute réclamation doit être faite sous 7 jours après livraison.
+    extra:
+      parties:
+        bill_to:
+          contact: Karin Josephs
+          fax: 0251-035695
+      refs:
+        salesperson: Andrew Fuller
+  evaluators: []
+- name: packing_slip/f86ab2d68c65f812
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/f86ab2d68c65f812.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: ZT-BL-21148
+    issue_date: '2021-02-24'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Toms Spezialitäten
+        address:
+          line1: Luisenstr. 48
+          line2: null
+          city: Münster
+          region: null
+          postal_code: '44087'
+          country: Germany
+        phone: 0251-031259
+        email: null
+        website: null
+        tax_id: null
+        code: TOMSP
+        bank: null
+      ship_to:
+        name: Königlich Essen
+        address:
+          line1: Maubelstr. 90
+          line2: null
+          city: Brandenburg
+          region: null
+          postal_code: '14776'
+          country: Germany
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: '21148'
+      customer_id: TOMSP
+      po_number: null
+      carrier: United Package
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '060'
+      description: Camembert Pierrot
+      quantity: '7'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 15 - 300 g rounds
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 7
+        backordered: 0
+    - sku: 069
+      description: Gudbrandsdalsost
+      quantity: '38'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 38
+        backordered: 0
+    - sku: '074'
+      description: Longlife Tofu
+      quantity: '6'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 5 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Produce
+        shipped: 6
+        backordered: 0
+    summary:
+    - label: packages
+      value: 9
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 51
+      fmt: int
+      strong: true
+    notes: Toute réclamation doit être faite sous 7 jours après livraison.
+    extra:
+      parties:
+        bill_to:
+          contact: Karin Josephs
+          fax: 0251-035695
+  evaluators: []
+- name: packing_slip/147ff5d7eee759ef
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/147ff5d7eee759ef.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN24052668
+    issue_date: '2024-07-21'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Leonard Deng
+        address:
+          line1: 7013 Cimarron Drive
+          line2: '# 110'
+          city: York
+          region: null
+          postal_code: YO15
+          country: United Kingdom
+        phone: 1 (11) 500 555-0180
+        email: leonard2@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00027821
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO52668
+      customer_id: AW00027821
+      po_number: null
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-T79Y-46
+      description: Touring-1000 Yellow, 46
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Touring Bikes
+        weight: '11.399'
+        shipped: 1
+        backordered: 0
+    - sku: HL-U509-R
+      description: Sport-100 Helmet, Red
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Helmets
+        shipped: 1
+        backordered: 0
+    - sku: CA-1098
+      description: AWC Logo Cap
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Caps
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 11.40 kg
+      fmt: text
+      strong: false
+    - label: total_units
+      value: 3
+      fmt: int
+      strong: true
+    notes: Apply grease regularly to maintain chain performance.
+    extra: null
+  evaluators: []
+- name: packing_slip/d37816c0c9d1d0ea
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/d37816c0c9d1d0ea.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: AC-BL-71864
+    issue_date: '2025-05-07'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Good Bike Shop
+        address:
+          line1: 99433 S. Greenbay Rd.
+          line2: null
+          city: Racine
+          region: WI
+          postal_code: '53182'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: AW00029651
+        bank: null
+      ship_to:
+        name: Good Bike Shop
+        address:
+          line1: 99433 S. Greenbay Rd.
+          line2: null
+          city: Racine
+          region: WI
+          postal_code: '53182'
+          country: United States
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO71864
+      customer_id: AW00029651
+      po_number: null
+      carrier: Cargo Transport 5
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R19B-44
+      description: Road-750 Black, 44
+      quantity: '2'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '8.968'
+        shipped: 2
+        backordered: 0
+    - sku: BK-R19B-48
+      description: Road-750 Black, 48
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '9.131'
+        shipped: 1
+        backordered: 0
+    - sku: BK-R19B-52
+      description: Road-750 Black, 52
+      quantity: '2'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '9.262'
+        shipped: 2
+        backordered: 0
+    - sku: BK-R19B-58
+      description: Road-750 Black, 58
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '9.430'
+        shipped: 1
+        backordered: 0
+    - sku: BK-R64Y-42
+      description: Road-550-W Yellow, 42
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '8.224'
+        shipped: 1
+        backordered: 0
+    - sku: BK-R64Y-48
+      description: Road-550-W Yellow, 48
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '8.473'
+        shipped: 1
+        backordered: 0
+    - sku: BK-R79Y-42
+      description: Road-350-W Yellow, 42
+      quantity: '3'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '7.153'
+        shipped: 3
+        backordered: 0
+    - sku: BK-R79Y-44
+      description: Road-350-W Yellow, 44
+      quantity: '4'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '7.316'
+        shipped: 4
+        backordered: 0
+    - sku: BK-R79Y-48
+      description: Road-350-W Yellow, 48
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '7.448'
+        shipped: 1
+        backordered: 0
+    - sku: BK-R89R-58
+      description: Road-250 Red, 58
+      quantity: '2'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '7.162'
+        shipped: 2
+        backordered: 0
+    - sku: SO-R809-L
+      description: Racing Socks, L
+      quantity: '9'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Socks
+        shipped: 9
+        backordered: 0
+    - sku: PD-R347
+      description: LL Road Pedal
+      quantity: '4'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Pedals
+        weight: '0.189'
+        shipped: 4
+        backordered: 0
+    - sku: PD-R853
+      description: HL Road Pedal
+      quantity: '2'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Pedals
+        weight: '0.149'
+        shipped: 2
+        backordered: 0
+    - sku: BK-R89B-44
+      description: Road-250 Black, 44
+      quantity: '2'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '6.700'
+        shipped: 2
+        backordered: 0
+    - sku: BK-R64Y-40
+      description: Road-550-W Yellow, 40
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '8.060'
+        shipped: 1
+        backordered: 0
+    - sku: BK-R89B-48
+      description: Road-250 Black, 48
+      quantity: '2'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '6.863'
+        shipped: 2
+        backordered: 0
+    - sku: BK-R89B-58
+      description: Road-250 Black, 58
+      quantity: '3'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '7.112'
+        shipped: 3
+        backordered: 0
+    - sku: BK-R64Y-38
+      description: Road-550-W Yellow, 38
+      quantity: '2'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '7.870'
+        shipped: 2
+        backordered: 0
+    - sku: BK-R89B-52
+      description: Road-250 Black, 52
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '6.994'
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 4
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 224.52 kg
+      fmt: text
+      strong: false
+    - label: total_units
+      value: 44
+      fmt: int
+      strong: true
+    notes: Frames carry a limited lifetime warranty; components are covered for 2
+      years.
+    extra:
+      parties:
+        bill_to:
+          contact: Lee Chapla
+      refs:
+        tracking_number: 2987-40A6-86
+  evaluators: []
+- name: packing_slip/e1bf09f57616e62c
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/e1bf09f57616e62c.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN24053848
+    issue_date: '2024-08-10'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Todd She
+        address:
+          line1: 5866 Harvard Court
+          line2: null
+          city: Warrington
+          region: null
+          postal_code: WA3 7BH
+          country: United Kingdom
+        phone: 1 (11) 500 555-0150
+        email: todd20@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00023442
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO53848
+      customer_id: AW00023442
+      po_number: PO-18023
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Bottles and Cages
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 1
+      fmt: int
+      strong: true
+    notes: Please retain packaging until installation is complete.
+    extra: null
+  evaluators: []
+- name: packing_slip/e3131f19b5a78b9e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/e3131f19b5a78b9e.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: ZT-BL-12327
+    issue_date: '2013-01-31'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: White Clover Markets
+        address:
+          line1: 305 - 14th Ave. S. Suite 3B
+          line2: null
+          city: Seattle
+          region: null
+          postal_code: '98128'
+          country: USA
+        phone: (206) 555-4112
+        email: null
+        website: null
+        tax_id: null
+        code: WHITC
+        bank: null
+      ship_to:
+        name: Gourmet Lanchonetes
+        address:
+          line1: Av. Brasil, 442
+          line2: null
+          city: Campinas
+          region: null
+          postal_code: 04876-786
+          country: Brazil
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: '12327'
+      customer_id: WHITC
+      po_number: null
+      carrier: Federal Shipping
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '002'
+      description: Chang
+      quantity: '26'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 26
+        backordered: 0
+    - sku: 008
+      description: Northwoods Cranberry Sauce
+      quantity: '41'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 12 oz jars
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 41
+        backordered: 0
+    - sku: '011'
+      description: Queso Cabrales
+      quantity: '3'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 1 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 3
+        backordered: 0
+    - sku: '014'
+      description: Tofu
+      quantity: '7'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 40 - 100 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Produce
+        shipped: 7
+        backordered: 0
+    - sku: 018
+      description: Carnarvon Tigers
+      quantity: '15'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 16 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 15
+        backordered: 0
+    - sku: 019
+      description: Teatime Chocolate Biscuits
+      quantity: '14'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 boxes x 12 pieces
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 14
+        backordered: 0
+    - sku: '022'
+      description: Gustaf's Knäckebröd
+      quantity: '18'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 500 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Grains/Cereals
+        shipped: 18
+        backordered: 0
+    - sku: '026'
+      description: Gumbär Gummibärchen
+      quantity: '22'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 100 - 250 g bags
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 22
+        backordered: 0
+    - sku: '032'
+      description: Mascarpone Fabioli
+      quantity: '15'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 200 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 15
+        backordered: 0
+    - sku: 039
+      description: Chartreuse verte
+      quantity: '10'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 750 cc per bottle
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 10
+        backordered: 0
+    - sku: '041'
+      description: Jack's New England Clam Chowder
+      quantity: '23'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 12 oz cans
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 23
+        backordered: 0
+    - sku: 049
+      description: Maxilaku
+      quantity: '40'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 50 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 40
+        backordered: 0
+    - sku: '053'
+      description: Perth Pasties
+      quantity: '26'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 48 pieces
+      line_total: '0.00'
+      extra:
+        category: Meat/Poultry
+        shipped: 26
+        backordered: 0
+    - sku: '057'
+      description: Ravioli Angelo
+      quantity: '27'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 250 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Grains/Cereals
+        shipped: 27
+        backordered: 0
+    - sku: '061'
+      description: Sirop d'érable
+      quantity: '27'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 500 ml bottles
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 27
+        backordered: 0
+    - sku: '064'
+      description: Wimmers gute Semmelknödel
+      quantity: '35'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 20 bags x 4 pieces
+      line_total: '0.00'
+      extra:
+        category: Grains/Cereals
+        shipped: 35
+        backordered: 0
+    - sku: '065'
+      description: Louisiana Fiery Hot Pepper Sauce
+      quantity: '27'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 32 - 8 oz bottles
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 27
+        backordered: 0
+    - sku: '072'
+      description: Mozzarella di Giovanni
+      quantity: '28'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 200 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 28
+        backordered: 0
+    - sku: '074'
+      description: Longlife Tofu
+      quantity: '17'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 5 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Produce
+        shipped: 17
+        backordered: 0
+    - sku: '075'
+      description: Rhönbräu Klosterbier
+      quantity: '46'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 0.5 l bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 46
+        backordered: 0
+    summary:
+    - label: packages
+      value: 10
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 467
+      fmt: int
+      strong: true
+    notes: Toute réclamation doit être faite sous 7 jours après livraison.
+    extra:
+      parties:
+        bill_to:
+          contact: Karl Jablonski
+          fax: (206) 555-4115
+      refs:
+        salesperson: Janet Leverling
+  evaluators: []
+- name: packing_slip/66676ddd731a0b4e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/66676ddd731a0b4e.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN24049953
+    issue_date: '2024-03-12'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Briana Martin
+        address:
+          line1: 1301 Stanbridge Ct
+          line2: null
+          city: Hobart
+          region: TAS
+          postal_code: '7001'
+          country: Australia
+        phone: 1 (11) 500 555-0180
+        email: briana0@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00015213
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO49953
+      customer_id: AW00015213
+      po_number: null
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-M68B-42
+      description: Mountain-200 Black, 42
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Mountain Bikes
+        weight: '10.782'
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 10.78 kg
+      fmt: text
+      strong: false
+    - label: total_units
+      value: 1
+      fmt: int
+      strong: true
+    notes: Please retain packaging until installation is complete.
+    extra: null
+  evaluators: []
+- name: packing_slip/c88d55474eb239c2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/c88d55474eb239c2.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: AC-BL-54471
+    issue_date: '2024-08-21'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Rachel Powell
+        address:
+          line1: 1488 Cambelback Place
+          line2: null
+          city: Brisbane
+          region: QLD
+          postal_code: '4000'
+          country: Australia
+        phone: 1 (11) 500 555-0118
+        email: rachel56@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00020818
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO54471
+      customer_id: AW00020818
+      po_number: null
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BC-R205
+      description: Road Bottle Cage
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Bottles and Cages
+        shipped: 1
+        backordered: 0
+    - sku: WB-H098
+      description: Water Bottle - 30 oz.
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Bottles and Cages
+        shipped: 1
+        backordered: 0
+    - sku: VE-C304-S
+      description: Classic Vest, S
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Vests
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 3
+      fmt: int
+      strong: true
+    notes: Late payments incur a 1.5% monthly interest after the due date.
+    extra: null
+  evaluators: []
+- name: packing_slip/92fe44eb86aea89f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/92fe44eb86aea89f.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: ZT-BL-14534
+    issue_date: '2017-09-12'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Laughing Bacchus Wine Cellars
+        address:
+          line1: 1900 Oak St.
+          line2: null
+          city: Vancouver
+          region: null
+          postal_code: V3F 2K1
+          country: Canada
+        phone: (604) 555-3392
+        email: null
+        website: null
+        tax_id: null
+        code: LAUGB
+        bank: null
+      ship_to:
+        name: Folies gourmandes
+        address:
+          line1: 184, chaussée de Tournai
+          line2: null
+          city: Lille
+          region: null
+          postal_code: '59000'
+          country: France
+        phone: null
+        email: null
+        website: null
+        tax_id: null
+        code: null
+        bank: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: LAUGB
+      po_number: null
+      carrier: Speedy Express
+      account_number: null
+      requested_by: null
+    items:
+    - sku: 018
+      description: Carnarvon Tigers
+      quantity: '38'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 16 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 38
+        backordered: 0
+    - sku: '020'
+      description: Sir Rodney's Marmalade
+      quantity: '35'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 30 gift boxes
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 35
+        backordered: 0
+    - sku: '024'
+      description: Guaraná Fantástica
+      quantity: '4'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 355 ml cans
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 4
+        backordered: 0
+    - sku: '027'
+      description: Schoggi Schokolade
+      quantity: '23'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 100 - 100 g pieces
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 23
+        backordered: 0
+    - sku: 029
+      description: Thüringer Rostbratwurst
+      quantity: '50'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 50 bags x 30 sausgs.
+      line_total: '0.00'
+      extra:
+        category: Meat/Poultry
+        shipped: 50
+        backordered: 0
+    - sku: '031'
+      description: Gorgonzola Telino
+      quantity: '34'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 100 g pkgs
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 34
+        backordered: 0
+    - sku: '032'
+      description: Mascarpone Fabioli
+      quantity: '4'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 200 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 4
+        backordered: 0
+    - sku: '033'
+      description: Geitost
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 500 g
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 1
+        backordered: 0
+    - sku: '034'
+      description: Sasquatch Ale
+      quantity: '41'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 41
+        backordered: 0
+    - sku: '035'
+      description: Steeleye Stout
+      quantity: '43'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 12 oz bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 43
+        backordered: 0
+    - sku: 038
+      description: Côte de Blaye
+      quantity: '34'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 75 cl bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 34
+        backordered: 0
+    - sku: 039
+      description: Chartreuse verte
+      quantity: '38'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 750 cc per bottle
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 38
+        backordered: 0
+    - sku: '042'
+      description: Singaporean Hokkien Fried Mee
+      quantity: '3'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 32 - 1 kg pkgs.
+      line_total: '0.00'
+      extra:
+        category: Grains/Cereals
+        shipped: 3
+        backordered: 0
+    - sku: '045'
+      description: Rogede sild
+      quantity: '27'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 1k pkg.
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 27
+        backordered: 0
+    - sku: 049
+      description: Maxilaku
+      quantity: '24'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 50 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 24
+        backordered: 0
+    - sku: '050'
+      description: Valkoinen suklaa
+      quantity: '28'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 - 100 g bars
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 28
+        backordered: 0
+    - sku: 059
+      description: Raclette Courdavault
+      quantity: '7'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 5 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 7
+        backordered: 0
+    - sku: '071'
+      description: Flotemysost
+      quantity: '36'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 10 - 500 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Dairy Products
+        shipped: 36
+        backordered: 0
+    - sku: '074'
+      description: Longlife Tofu
+      quantity: '17'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 5 kg pkg.
+      line_total: '0.00'
+      extra:
+        category: Produce
+        shipped: 17
+        backordered: 0
+    - sku: '075'
+      description: Rhönbräu Klosterbier
+      quantity: '45'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 0.5 l bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 45
+        backordered: 0
+    - sku: '076'
+      description: Lakkalikööri
+      quantity: '9'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 500 ml
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 9
+        backordered: 0
+    - sku: '077'
+      description: Original Frankfurter grüne Soße
+      quantity: '49'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 12 boxes
+      line_total: '0.00'
+      extra:
+        category: Condiments
+        shipped: 49
+        backordered: 0
+    summary:
+    - label: packages
+      value: 13
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 590
+      fmt: int
+      strong: true
+    notes: Marchandises livrées sous réserve de propriété.
+    extra:
+      parties:
+        bill_to:
+          contact: Yoshi Tannamuri
+          fax: (604) 555-7293
+  evaluators: []
+- name: packing_slip/ced989997bf6f0a2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/ced989997bf6f0a2.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: DN24057297
+    issue_date: '2024-10-07'
+    currency: GBP
+    parties:
+      issuer:
+        name: Meridian Components & Co. Ltd
+        address:
+          line1: 274 High Street
+          line2: null
+          city: Manchester
+          region: null
+          postal_code: M1 2AB
+          country: United Kingdom
+        phone: +44 20 2401437
+        email: contact@meridiancomponents.co.uk
+        website: www.meridiancomponents.co.uk
+        tax_id: VAT GB248674625
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB25 5280 4215 1335 2083 1302
+          bic: MERIGB76
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Candice Zhang
+        address:
+          line1: 4810 Veronica Ct.
+          line2: null
+          city: Milton Keynes
+          region: null
+          postal_code: MK8 8ZD
+          country: United Kingdom
+        phone: 1 (11) 500 555-0196
+        email: candice8@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00023777
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: AW00023777
+      po_number: null
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-R64Y-42
+      description: Road-550-W Yellow, 42
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Road Bikes
+        weight: '8.224'
+        shipped: 1
+        backordered: 0
+    - sku: LJ-0192-M
+      description: Long-Sleeve Logo Jersey, M
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Jerseys
+        shipped: 1
+        backordered: 0
+    - sku: SO-R809-M
+      description: Racing Socks, M
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Socks
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 8.22 kg
+      fmt: text
+      strong: false
+    - label: total_units
+      value: 3
+      fmt: int
+      strong: true
+    notes: Please retain packaging until installation is complete.
+    extra: null
+  evaluators: []
+- name: packing_slip/e74ab40b6c7b775f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/e74ab40b6c7b775f.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: ZT-BL-16071
+    issue_date: '2014-10-07'
+    currency: EUR
+    parties:
+      issuer:
+        name: Zenith Trading SPRL
+        address:
+          line1: 31, rue des Bouchers
+          line2: Building D
+          city: Bruxelles
+          region: null
+          postal_code: '1000'
+          country: Belgique
+        phone: +32 2 000 15 29
+        email: contact@zenithtrading.be
+        website: www.zenithtrading.be
+        tax_id: TVA BE0364528519
+        code: BE
+        bank:
+          bank_name: Crédit Régional
+          iban: BE24 3837 4601 1852 2650 1661
+          bic: ZENIBE27
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Blauer See Delikatessen
+        address:
+          line1: Forsterstr. 57
+          line2: null
+          city: Mannheim
+          region: null
+          postal_code: '68306'
+          country: Germany
+        phone: 0621-08460
+        email: null
+        website: null
+        tax_id: null
+        code: BLAUS
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: null
+      customer_id: BLAUS
+      po_number: null
+      carrier: Speedy Express
+      account_number: null
+      requested_by: null
+    items:
+    - sku: '014'
+      description: Tofu
+      quantity: '5'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 40 - 100 g pkgs.
+      line_total: '0.00'
+      extra:
+        category: Produce
+        shipped: 5
+        backordered: 0
+    - sku: '020'
+      description: Sir Rodney's Marmalade
+      quantity: '6'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 30 gift boxes
+      line_total: '0.00'
+      extra:
+        category: Confections
+        shipped: 6
+        backordered: 0
+    - sku: '040'
+      description: Boston Crab Meat
+      quantity: '44'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 4 oz tins
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 44
+        backordered: 0
+    - sku: '073'
+      description: Röd Kaviar
+      quantity: '38'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 150 g jars
+      line_total: '0.00'
+      extra:
+        category: Seafood
+        shipped: 38
+        backordered: 0
+    - sku: '075'
+      description: Rhönbräu Klosterbier
+      quantity: '42'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: 24 - 0.5 l bottles
+      line_total: '0.00'
+      extra:
+        category: Beverages
+        shipped: 42
+        backordered: 0
+    summary:
+    - label: packages
+      value: 23
+      fmt: int
+      strong: false
+    - label: total_units
+      value: 135
+      fmt: int
+      strong: true
+    notes: Marchandises livrées sous réserve de propriété.
+    extra:
+      parties:
+        bill_to:
+          contact: Hanna Moos
+          fax: 0621-08924
+      refs:
+        salesperson: Robert King
+  evaluators: []
+- name: packing_slip/fb0100faddbfb1d3
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/fb0100faddbfb1d3.pdf
+    doc_type: packing_slip
+  metadata: null
+  expected_output:
+    doc_type: packing_slip
+    number: AC-BL-72008
+    issue_date: '2025-05-08'
+    currency: GBP
+    parties:
+      issuer:
+        name: Atlas Cycles PLC
+        address:
+          line1: 223 King's Road
+          line2: null
+          city: Leeds
+          region: null
+          postal_code: LS1 5AA
+          country: United Kingdom
+        phone: +44 20 2043225
+        email: accounts@atlascycles.co.uk
+        website: www.atlascycles.co.uk
+        tax_id: VAT GB656081621
+        code: UK
+        bank:
+          bank_name: City Savings Bank
+          iban: GB63 4972 3807 3692 9463 4824
+          bic: ATLAGB75
+          account_number: null
+          routing_number: null
+      bill_to:
+        name: Jessie Zheng
+        address:
+          line1: 2507 Bonsai Court
+          line2: null
+          city: Oxford
+          region: null
+          postal_code: OX14 4SE
+          country: United Kingdom
+        phone: 1 (11) 500 555-0178
+        email: jessie25@adventure-works.com
+        website: null
+        tax_id: null
+        code: AW00018028
+        bank: null
+      ship_to: null
+      vendor: null
+      deliver_to: null
+      consignee: null
+      carrier: null
+    refs:
+      order_id: SO72008
+      customer_id: AW00018028
+      po_number: null
+      carrier: Xrq - Truck Ground
+      account_number: null
+      requested_by: null
+    items:
+    - sku: BK-M38S-38
+      description: Mountain-400-W Silver, 38
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Mountain Bikes
+        weight: '11.952'
+        shipped: 1
+        backordered: 0
+    - sku: LJ-0192-X
+      description: Long-Sleeve Logo Jersey, XL
+      quantity: '1'
+      unit_price: '0.00'
+      discount_rate: '0'
+      tax_rate: '0'
+      unit: EA
+      line_total: '0.00'
+      extra:
+        category: Jerseys
+        shipped: 1
+        backordered: 0
+    summary:
+    - label: packages
+      value: 1
+      fmt: int
+      strong: false
+    - label: total_weight
+      value: 11.95 kg
+      fmt: text
+      strong: false
+    - label: total_units
+      value: 2
+      fmt: int
+      strong: true
+    notes: Keep your bike clean, lubricate the chain regularly, and store it dry.
+    extra: null
+  evaluators: []
+evaluators:
+- ExtractionMetrics
+report_evaluators:
+- ExtractionMetricsReport

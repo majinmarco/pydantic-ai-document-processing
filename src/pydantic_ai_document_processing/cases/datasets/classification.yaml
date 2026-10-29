@@ -1,0 +1,852 @@
+# yaml-language-server: $schema=classification_schema.json
+name: classification
+cases:
+- name: invoice/273b222360a99bee
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/273b222360a99bee.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/1517b78beb66962b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/1517b78beb66962b.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/4707e50ed3a9b867
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/4707e50ed3a9b867.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/4063f3a938e69e42
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/4063f3a938e69e42.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/54c99cf593607c31
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/54c99cf593607c31.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/f19497f05891ae2f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/f19497f05891ae2f.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/e9fafbc01ee8fa92
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/e9fafbc01ee8fa92.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/7cd7a5c9f736673f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/7cd7a5c9f736673f.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/116b985ae7fd4ffb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/116b985ae7fd4ffb.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/5422aa0ee1b3028f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/5422aa0ee1b3028f.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/3eb48aa1a38b41c9
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/3eb48aa1a38b41c9.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/dac73f5269011c42
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/dac73f5269011c42.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/08d9da182461f1db
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/08d9da182461f1db.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/662c9c35df15c67b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/662c9c35df15c67b.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/4136eea0d3c43447
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/4136eea0d3c43447.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/715a520bf85b5274
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/715a520bf85b5274.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/309d927f9dd602e6
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/309d927f9dd602e6.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/0689f447fb9debe7
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/0689f447fb9debe7.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/7c1a463b054acd57
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/7c1a463b054acd57.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: invoice/2870b3f4c85fdf5b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/invoice/2870b3f4c85fdf5b.pdf
+  metadata: null
+  expected_output:
+    document_type: invoice
+  evaluators: []
+- name: packing_slip/7223c8d3ddb04182
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/7223c8d3ddb04182.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/cb16004c9224f84d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/cb16004c9224f84d.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/13e6e2e619585ac2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/13e6e2e619585ac2.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/9bace7281eca5861
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/9bace7281eca5861.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/93673d66418704ea
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/93673d66418704ea.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/175de1cba82d21eb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/175de1cba82d21eb.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/82f45b44b0e2d293
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/82f45b44b0e2d293.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/879daa312b2fffca
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/879daa312b2fffca.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/b9afce3b71b2eda8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/b9afce3b71b2eda8.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/f86ab2d68c65f812
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/f86ab2d68c65f812.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/147ff5d7eee759ef
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/147ff5d7eee759ef.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/d37816c0c9d1d0ea
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/d37816c0c9d1d0ea.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/e1bf09f57616e62c
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/e1bf09f57616e62c.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/e3131f19b5a78b9e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/e3131f19b5a78b9e.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/66676ddd731a0b4e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/66676ddd731a0b4e.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/c88d55474eb239c2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/c88d55474eb239c2.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/92fe44eb86aea89f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/92fe44eb86aea89f.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/ced989997bf6f0a2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/ced989997bf6f0a2.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/e74ab40b6c7b775f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/e74ab40b6c7b775f.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: packing_slip/fb0100faddbfb1d3
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/packing_slip/fb0100faddbfb1d3.pdf
+  metadata: null
+  expected_output:
+    document_type: packing_slip
+  evaluators: []
+- name: purchase_order/0cc06330a66a25d0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0cc06330a66a25d0.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/345d39c36ae82ce0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/345d39c36ae82ce0.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/237b40c35b0133cb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/237b40c35b0133cb.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/18001fff63f6dea9
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/18001fff63f6dea9.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/54046f9e28d68deb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/54046f9e28d68deb.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/4e3775a5410d325b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/4e3775a5410d325b.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/7e1f5de777a2fc3f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/7e1f5de777a2fc3f.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/db1726096b2ff47f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/db1726096b2ff47f.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/bcfa8415c803c753
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/bcfa8415c803c753.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/28951688dccbc78d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/28951688dccbc78d.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/2679aba89749ed5e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/2679aba89749ed5e.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/8eeacc448e085259
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/8eeacc448e085259.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/a109439d241d995b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/a109439d241d995b.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/cac85205a969e70a
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/cac85205a969e70a.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/0cf180e23fd2ed88
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0cf180e23fd2ed88.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/7c6b17244a7060b1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/7c6b17244a7060b1.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/fc233a1b97b103fe
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/fc233a1b97b103fe.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/0ae5fd74f2499a3e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0ae5fd74f2499a3e.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/8278a734bf640d2e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/8278a734bf640d2e.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: purchase_order/0d88f56aaf55f2c0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/purchase_order/0d88f56aaf55f2c0.pdf
+  metadata: null
+  expected_output:
+    document_type: purchase_order
+  evaluators: []
+- name: quote/cd9fa117305d21a4
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/cd9fa117305d21a4.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/c21ab4d1cf6736a1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/c21ab4d1cf6736a1.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/30d225eb093066f0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/30d225eb093066f0.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/ec25376cd39b8f16
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/ec25376cd39b8f16.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/6bd93401ff4fc0b0
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/6bd93401ff4fc0b0.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/428040a52b8a91d8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/428040a52b8a91d8.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/a2b3c45d9e6ddb15
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/a2b3c45d9e6ddb15.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/2c93cba5f514e131
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/2c93cba5f514e131.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/792c1e9ac0c7b7d4
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/792c1e9ac0c7b7d4.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/47d2025cf9cb71e6
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/47d2025cf9cb71e6.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/21086a2514df2e5e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/21086a2514df2e5e.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/7e8dfda81707cdd7
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/7e8dfda81707cdd7.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/d59b8b7c9239b5e2
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/d59b8b7c9239b5e2.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/c8a213a06843c603
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/c8a213a06843c603.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/f3bfa8aa8b9db78d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/f3bfa8aa8b9db78d.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/96bed54bedf24c68
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/96bed54bedf24c68.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/dbd3c0706fe9f8ab
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/dbd3c0706fe9f8ab.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/f6b31e1845e9ea77
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/f6b31e1845e9ea77.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/ec0515f1bb77080f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/ec0515f1bb77080f.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: quote/afbbd2f3bceb9784
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/quote/afbbd2f3bceb9784.pdf
+  metadata: null
+  expected_output:
+    document_type: quote
+  evaluators: []
+- name: shipping_order/0bdab244b34fc02f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/0bdab244b34fc02f.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/07a46ddace12f02b
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/07a46ddace12f02b.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/7d6f9c36a692e568
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/7d6f9c36a692e568.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/afd2721958fa0bce
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/afd2721958fa0bce.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/f13331deb26161a1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/f13331deb26161a1.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/232ac1bd1093f221
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/232ac1bd1093f221.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/fea5bb2a244cdee1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/fea5bb2a244cdee1.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/fd25b2018cf6d670
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/fd25b2018cf6d670.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/930690ba0730d8cc
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/930690ba0730d8cc.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/a401ac2a3630b506
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/a401ac2a3630b506.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/eb555104bb715f64
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/eb555104bb715f64.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/eb7c968b7efefb0e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/eb7c968b7efefb0e.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/6b7942975b79d2a3
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/6b7942975b79d2a3.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/f8c2b82e58c1e848
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/f8c2b82e58c1e848.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/fb8b488bafce8659
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/fb8b488bafce8659.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/b12d7375ee0368a8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/b12d7375ee0368a8.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/b05a9f3426942753
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/b05a9f3426942753.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/dc90dbc42e3dc90a
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/dc90dbc42e3dc90a.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/c7c7964db795491e
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/c7c7964db795491e.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: shipping_order/4bdf22de9ca10838
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/shipping_order/4bdf22de9ca10838.pdf
+  metadata: null
+  expected_output:
+    document_type: shipping_order
+  evaluators: []
+- name: work_order/b608a98f0b0fc2aa
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/b608a98f0b0fc2aa.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/13b32edf58bb878f
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/13b32edf58bb878f.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/55a2c9418e2db030
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/55a2c9418e2db030.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/4f674e1e2950fdeb
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/4f674e1e2950fdeb.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/411dcfc7fcc3d7c5
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/411dcfc7fcc3d7c5.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/f1da6dc804e4bd31
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/f1da6dc804e4bd31.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/37d33f81b58628a1
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/37d33f81b58628a1.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/e0d829991e72f30d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/e0d829991e72f30d.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/0658628b8ef28a49
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/0658628b8ef28a49.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/e5cf0e84da7d0821
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/e5cf0e84da7d0821.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/d33e230fc660b13a
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/d33e230fc660b13a.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/4604b22514303b89
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/4604b22514303b89.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/f957cbd1dd69c388
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/f957cbd1dd69c388.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/d55fe18a533d9d8d
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/d55fe18a533d9d8d.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/6f611a000de14474
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/6f611a000de14474.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/892ada8c1cfce7d8
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/892ada8c1cfce7d8.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/5aedb5e867f82977
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/5aedb5e867f82977.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/59b10cd0af7f8788
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/59b10cd0af7f8788.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/a81f6feec6fe6097
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/a81f6feec6fe6097.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+- name: work_order/2605d2471a6161a4
+  inputs:
+    pdf_path: data/company-document-dataset-v2/validation/work_order/2605d2471a6161a4.pdf
+  metadata: null
+  expected_output:
+    document_type: work_order
+  evaluators: []
+evaluators:
+- ClassificationMetrics
+report_evaluators:
+- ConfusionMatrixEvaluator:
+    predicted_from: labels
+    predicted_key: predicted_type
+    expected_from: labels
+    expected_key: expected_type
+    title: Document type confusion matrix
