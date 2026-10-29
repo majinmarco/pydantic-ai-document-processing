@@ -19,14 +19,32 @@ import pymupdf
 from chromadb import Knn
 import io
 from pathlib import Path
-from markitdown import Markitdown
+from markitdown import MarkItDown
+import asyncio
+import logfire
 
-md = Markitdown()
+md = MarkItDown()
+
+logfire.configure(scrubbing = False)
+
+# Indexed pdf_path values were stored relative to the vectorization notebook.
+_INDEX_PATH_BASE = Path(__file__).resolve().parent / "notebooks"
+
+
+def _resolve_indexed_pdf_path(stored_path: str) -> Path:
+    path = Path(stored_path)
+    if path.is_absolute():
+        return path
+    return (_INDEX_PATH_BASE / path).resolve()
 
 
 # function to process a pdf document
 async def process_document(pdf_path: Path) -> ProcessResult:
     try:
+        logfire.log(
+            "info", "Processing document: {pdf_path}", {"pdf_path": str(pdf_path)}
+        )
+
         # open pdf file
         doc = pymupdf.open(pdf_path.as_posix())
 
@@ -51,19 +69,32 @@ async def process_document(pdf_path: Path) -> ProcessResult:
 
         few_shot_examples = [
             {
-                "document": retrieval_results["documents"][0][m],
-                "category": retrieval_results["metadatas"][0]["category"],
+                "document_path": str(
+                    _resolve_indexed_pdf_path(
+                        retrieval_results["metadatas"][0][m]["pdf_path"]
+                    )
+                ),
+                "category": retrieval_results["metadatas"][0][m]["category"],
             }
             for m in range(FEW_SHOT_EXAMPLE_QTY)
         ]
 
+        classification_user_messages = await classification_prompt_helper(
+            few_shot_examples, pdf_path
+        )
+
         classification_result = await classification_agent.run(
-            [BinaryContent(data=pdf_path.read_bytes(), media_type="application/pdf")],
-            deps=ClassificationAgentDeps(few_shot_examples=few_shot_examples),
+            classification_user_messages,
+            deps=ClassificationAgentDeps(),
         )
 
         # validate classification result exists
         if classification_result.output:
+            logfire.log(
+                "info",
+                "Classification result: {classification_result}",
+                {"classification_result": classification_result.output},
+            )
             doc_type = classification_result.output.document_type
             doc_schema = extraction_agent_schema(doc_type)
         else:
@@ -76,6 +107,11 @@ async def process_document(pdf_path: Path) -> ProcessResult:
         )
 
         if extraction_result.output:
+            logfire.log(
+                "info",
+                "Extraction result: {extraction_result}",
+                {"extraction_result": extraction_result.output},
+            )
             return ProcessResult(
                 document_type=doc_type,
                 document_data=extraction_result.output,
@@ -91,6 +127,7 @@ async def process_document(pdf_path: Path) -> ProcessResult:
             )
 
     except Exception as e:
+        logfire.log("error", "Error processing document: {e}", {"e": str(e)})
         return ProcessResult(
             success=False, error_message=f"Error processing document: {e}"
         )
@@ -105,12 +142,70 @@ async def _retrieval_helper(query: str, k: int = 3) -> dict[str, Any]:
         emb = emb_result.embeddings[0]
 
         # retrieve documents
-        results = await chromadb_collection.query(
+        results = chromadb_collection.query(
             query_embeddings=[emb],
             n_results=k,
         )
+
+        logfire.log(
+            "info",
+            "Retrieval results: {results}. Keys: {keys}",
+            {"results": results, "keys": results.keys()},
+        )
+        logfire.log(
+            "info",
+            "Metadatas: {metadatas}, Documents: {data}",
+            {"metadatas": results["metadatas"], "data": results["data"]},
+        )
+        logfire.log(
+            "info", "Metadata keys: {keys}", {"keys": results["metadatas"][0][0].keys()}
+        )
+        logfire.log(
+            "info",
+            "Metadata length: {length}",
+            {"length": len(results["metadatas"][0])},
+        )
     except Exception as e:
-        print(f"Error retrieving documents: {e}")
+        logfire.log("error", "Error retrieving documents: {e}", {"e": str(e)})
         return {}
 
     return results
+
+
+async def classification_prompt_helper(
+    few_shot_examples: list[dict[str, str]], input_document_path: Path
+) -> list[BinaryContent | str]:
+    # each few-shot document is a binary content, followed by the category,
+    # ended by the actual document to classify
+    classification_user_messages = [
+        [
+            BinaryContent(
+                data=Path(example["document_path"]).read_bytes(),
+                media_type="application/pdf",
+            ),
+            f"document_type:{example['category']}.",
+        ]
+        for example in few_shot_examples
+    ]
+
+    # convert to list of messages instead of list of lists
+    classification_user_messages = [
+        message for sublist in classification_user_messages for message in sublist
+    ]
+
+    # add the actual document to classify
+    classification_user_messages.append(
+        BinaryContent(
+            data=input_document_path.read_bytes(), media_type="application/pdf"
+        )
+    )
+
+    return classification_user_messages
+
+
+if __name__ == "__main__":
+    pdf_path = (
+        Path(__file__).resolve().parent
+        / "data/company-document-dataset-v2/train/invoice/0a0b4bd2e80b16e2.pdf"
+    )
+    asyncio.run(process_document(pdf_path))
