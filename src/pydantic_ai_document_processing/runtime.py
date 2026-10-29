@@ -3,6 +3,7 @@ from typing import Any
 from pydantic_ai_document_processing.schemas import (
     ProcessResult,
     DocumentClassification,
+    DocumentType,
 )
 from pydantic_ai_document_processing.agent import (
     DocumentSchema,
@@ -45,76 +46,31 @@ async def process_document(pdf_path: Path) -> ProcessResult:
             "info", "Processing document: {pdf_path}", {"pdf_path": str(pdf_path)}
         )
 
-        # open pdf file
-        doc = pymupdf.open(pdf_path.as_posix())
-
-        if len(doc) == 0:
-            raise ValueError("No pages found in PDF")
-
-        single_page_doc = pymupdf.open()
-        single_page_doc.insert_pdf(doc, from_page=0, to_page=1)
-
-        pdf_bytes = single_page_doc.tobytes()
-        single_page_doc.close()
-        doc.close()
-
-        # document to markdown
-        page_md = md.convert(io.BytesIO(pdf_bytes), file_extension=".pdf")
-
-        retrieval_query = page_md.text_content
-
-        retrieval_results = await _retrieval_helper(
-            retrieval_query, FEW_SHOT_EXAMPLE_QTY
-        )
-
-        few_shot_examples = [
-            {
-                "document_path": str(
-                    _resolve_indexed_pdf_path(
-                        retrieval_results["metadatas"][0][m]["pdf_path"]
-                    )
-                ),
-                "category": retrieval_results["metadatas"][0][m]["category"],
-            }
-            for m in range(FEW_SHOT_EXAMPLE_QTY)
-        ]
-
-        classification_user_messages = await classification_prompt_helper(
-            few_shot_examples, pdf_path
-        )
-
-        classification_result = await classification_agent.run(
-            classification_user_messages,
-            deps=ClassificationAgentDeps(),
-        )
+        classification_result = await classification_pipe(pdf_path)
 
         # validate classification result exists
-        if classification_result.output:
+        if classification_result:
             logfire.log(
                 "info",
                 "Classification result: {classification_result}",
-                {"classification_result": classification_result.output},
+                {"classification_result": classification_result},
             )
-            doc_type = classification_result.output.document_type
+            doc_type = classification_result.document_type
             doc_schema = extraction_agent_schema(doc_type)
         else:
             raise ValueError("No classification result found")
 
-        extraction_result = await extraction_agent.run(
-            [BinaryContent(data=pdf_path.read_bytes(), media_type="application/pdf")],
-            deps=ExtractionAgentDeps(doc_type=doc_type, doc_schema=doc_schema),
-            output_type=doc_schema,
-        )
+        extraction_result = await extraction_pipe(pdf_path, doc_type, doc_schema)
 
-        if extraction_result.output:
+        if extraction_result:
             logfire.log(
                 "info",
                 "Extraction result: {extraction_result}",
-                {"extraction_result": extraction_result.output},
+                {"extraction_result": extraction_result},
             )
             return ProcessResult(
                 document_type=doc_type,
-                document_data=extraction_result.output,
+                document_data=extraction_result,
                 success=True,
                 error_message=None,
             )
@@ -132,6 +88,61 @@ async def process_document(pdf_path: Path) -> ProcessResult:
             success=False, error_message=f"Error processing document: {e}"
         )
 
+async def classification_pipe(pdf_path: Path) -> DocumentClassification:
+    # open pdf file
+    doc = pymupdf.open(pdf_path.as_posix())
+
+    if len(doc) == 0:
+        raise ValueError("No pages found in PDF")
+
+    single_page_doc = pymupdf.open()
+    single_page_doc.insert_pdf(doc, from_page=0, to_page=1)
+
+    pdf_bytes = single_page_doc.tobytes()
+    single_page_doc.close()
+    doc.close()
+
+    # document to markdown
+    page_md = md.convert(io.BytesIO(pdf_bytes), file_extension=".pdf")
+
+    retrieval_query = page_md.text_content
+
+    retrieval_results = await _retrieval_helper(
+        retrieval_query, FEW_SHOT_EXAMPLE_QTY
+    )
+
+    few_shot_examples = [
+        {
+            "document_path": str(
+                _resolve_indexed_pdf_path(
+                    retrieval_results["metadatas"][0][m]["pdf_path"]
+                )
+            ),
+            "category": retrieval_results["metadatas"][0][m]["category"],
+        }
+        for m in range(FEW_SHOT_EXAMPLE_QTY)
+    ]
+
+    classification_user_messages = await classification_prompt_helper(
+        few_shot_examples, pdf_path
+    )
+
+    result = await classification_agent.run(
+        classification_user_messages,
+        deps=ClassificationAgentDeps(),
+    )
+
+    return result.output
+
+async def extraction_pipe(
+    pdf_path: Path, doc_type: DocumentType, doc_schema: type[DocumentSchema]
+) -> DocumentSchema:
+    extraction_result = await extraction_agent.run(
+            [BinaryContent(data=pdf_path.read_bytes(), media_type="application/pdf")],
+            deps=ExtractionAgentDeps(doc_type=doc_type, doc_schema=doc_schema),
+            output_type=doc_schema,
+        )
+    return extraction_result.output
 
 # retrieval helper
 async def _retrieval_helper(query: str, k: int = 3) -> dict[str, Any]:

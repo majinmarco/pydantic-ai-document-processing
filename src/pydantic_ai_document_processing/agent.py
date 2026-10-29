@@ -1,10 +1,14 @@
 from dataclasses import dataclass, field
-from dotenv import load_dotenv
+from pathlib import Path
 from typing import get_args
-from pydantic_ai import Agent, RunContext, Embedder
-from pydantic_ai_document_processing.schemas import DocumentType, DocumentClassification
-import logfire
+
+import chromadb
+from dotenv import load_dotenv
+from pydantic_ai import Agent, Embedder, RunContext
+
 from pydantic_ai_document_processing.schemas import (
+    DocumentClassification,
+    DocumentType,
     Invoice,
     PackingSlip,
     PurchaseOrder,
@@ -12,8 +16,6 @@ from pydantic_ai_document_processing.schemas import (
     ShippingOrder,
     WorkOrder,
 )
-from pathlib import Path
-import chromadb
 
 DocumentSchema = (
     Invoice | PackingSlip | PurchaseOrder | Quote | ShippingOrder | WorkOrder
