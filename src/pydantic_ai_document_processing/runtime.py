@@ -16,6 +16,7 @@ from pydantic_ai_document_processing.agent import (
     ExtractionAgentDeps,
     extraction_agent,
 )
+from pydantic_ai.models.instrumented import InstrumentationSettings
 import pymupdf
 from chromadb import Knn
 import io
@@ -26,7 +27,16 @@ import logfire
 
 md = MarkItDown()
 
-logfire.configure(scrubbing = False)
+logfire.configure(
+    scrubbing = False,
+    metrics = logfire.MetricsOptions(
+        collect_in_spans = True,
+    )
+)
+
+logfire.instrument_pydantic_ai(
+    include_binary_content = False,
+)
 
 # Indexed pdf_path values were stored relative to the vectorization notebook.
 _INDEX_PATH_BASE = Path(__file__).resolve().parent / "notebooks"
@@ -46,41 +56,43 @@ async def process_document(pdf_path: Path) -> ProcessResult:
             "info", "Processing document: {pdf_path}", {"pdf_path": str(pdf_path)}
         )
 
-        classification_result = await classification_pipe(pdf_path)
+        with logfire.span("classification_pipe"):
+            classification_result = await classification_pipe(pdf_path)
 
-        # validate classification result exists
-        if classification_result:
-            logfire.log(
-                "info",
-                "Classification result: {classification_result}",
-                {"classification_result": classification_result},
-            )
-            doc_type = classification_result.document_type
-            doc_schema = extraction_agent_schema(doc_type)
-        else:
-            raise ValueError("No classification result found")
+            # validate classification result exists
+            if classification_result:
+                logfire.log(
+                    "info",
+                    "Classification result: {classification_result}",
+                    {"classification_result": classification_result},
+                )
+                doc_type = classification_result.document_type
+                doc_schema = extraction_agent_schema(doc_type)
+            else:
+                raise ValueError("No classification result found")
 
-        extraction_result = await extraction_pipe(pdf_path, doc_type, doc_schema)
+        with logfire.span("extraction_pipe"):
+            extraction_result = await extraction_pipe(pdf_path, doc_type, doc_schema)
 
-        if extraction_result:
-            logfire.log(
-                "info",
-                "Extraction result: {extraction_result}",
-                {"extraction_result": extraction_result},
-            )
-            return ProcessResult(
-                document_type=doc_type,
-                document_data=extraction_result,
-                success=True,
-                error_message=None,
-            )
-        else:
-            return ProcessResult(
-                document_type=doc_type,
-                document_data=None,
-                success=False,
-                error_message="No extraction result found",
-            )
+            if extraction_result:
+                logfire.log(
+                    "info",
+                    "Extraction result: {extraction_result}",
+                    {"extraction_result": extraction_result},
+                )
+                return ProcessResult(
+                    document_type=doc_type,
+                    document_data=extraction_result,
+                    success=True,
+                    error_message=None,
+                )
+            else:
+                return ProcessResult(
+                    document_type=doc_type,
+                    document_data=None,
+                    success=False,
+                    error_message="No extraction result found",
+                )
 
     except Exception as e:
         logfire.log("error", "Error processing document: {e}", {"e": str(e)})
@@ -88,7 +100,7 @@ async def process_document(pdf_path: Path) -> ProcessResult:
             success=False, error_message=f"Error processing document: {e}"
         )
 
-async def classification_pipe(pdf_path: Path) -> DocumentClassification:
+async def classification_pipe(pdf_path: Path, use_rag: bool = True) -> DocumentClassification:
     # open pdf file
     doc = pymupdf.open(pdf_path.as_posix())
 
@@ -107,21 +119,25 @@ async def classification_pipe(pdf_path: Path) -> DocumentClassification:
 
     retrieval_query = page_md.text_content
 
-    retrieval_results = await _retrieval_helper(
-        retrieval_query, FEW_SHOT_EXAMPLE_QTY
-    )
+    few_shot_examples = []
 
-    few_shot_examples = [
-        {
-            "document_path": str(
-                _resolve_indexed_pdf_path(
-                    retrieval_results["metadatas"][0][m]["pdf_path"]
-                )
-            ),
-            "category": retrieval_results["metadatas"][0][m]["category"],
-        }
-        for m in range(FEW_SHOT_EXAMPLE_QTY)
-    ]
+    if use_rag:
+
+        retrieval_results = await _retrieval_helper(
+            retrieval_query, FEW_SHOT_EXAMPLE_QTY
+        )
+
+        few_shot_examples = [
+            {
+                "document_path": str(
+                    _resolve_indexed_pdf_path(
+                        retrieval_results["metadatas"][0][m]["pdf_path"]
+                    )
+                ),
+                "category": retrieval_results["metadatas"][0][m]["category"],
+            }
+            for m in range(FEW_SHOT_EXAMPLE_QTY)
+        ]
 
     classification_user_messages = await classification_prompt_helper(
         few_shot_examples, pdf_path
@@ -188,21 +204,26 @@ async def classification_prompt_helper(
 ) -> list[BinaryContent | str]:
     # each few-shot document is a binary content, followed by the category,
     # ended by the actual document to classify
-    classification_user_messages = [
-        [
-            BinaryContent(
-                data=Path(example["document_path"]).read_bytes(),
-                media_type="application/pdf",
-            ),
-            f"document_type:{example['category']}.",
+    classification_user_messages = []
+    if few_shot_examples:
+        classification_user_messages = [
+            [
+                BinaryContent(
+                    data=Path(example["document_path"]).read_bytes(),
+                    media_type="application/pdf",
+                ),
+                f"document_type:{example['category']}.",
+            ]
+            for example in few_shot_examples
         ]
-        for example in few_shot_examples
-    ]
 
-    # convert to list of messages instead of list of lists
-    classification_user_messages = [
-        message for sublist in classification_user_messages for message in sublist
-    ]
+        # convert to list of messages instead of list of lists
+        classification_user_messages = [
+            message for sublist in classification_user_messages for message in sublist
+        ]
+
+        # add few-shot instructions as first message
+        classification_user_messages.insert(0, "Use the following few-shot examples to assist in classifying the document.")
 
     # add the actual document to classify
     classification_user_messages.append(

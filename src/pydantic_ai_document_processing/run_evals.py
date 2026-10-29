@@ -1,6 +1,9 @@
 """Evaluate golden classification and extraction datasets and print reports."""
 
 from __future__ import annotations
+from pydantic_ai import InstrumentationSettings
+import json
+from datetime import datetime
 
 import argparse
 from collections.abc import Sequence
@@ -19,16 +22,26 @@ from pydantic_ai_document_processing.evals import (
     load_extraction_dataset,
     resolve_pdf_path,
 )
+import logfire
 from pydantic_ai_document_processing.schemas import DocumentClassification, DocumentType
 
 Kind = Literal["all", "classification", "extraction"]
 
+logfire.configure()
+logfire.instrument_pydantic_ai(
+    include_binary_content = False,
+)
 
 async def classify_case(inputs: ClassificationInput) -> DocumentClassification:
     from pydantic_ai_document_processing.runtime import classification_pipe
 
     return await classification_pipe(resolve_pdf_path(inputs.pdf_path))
 
+
+async def classify_case_no_rag(inputs: ClassificationInput) -> DocumentClassification:
+    from pydantic_ai_document_processing.runtime import classification_pipe
+
+    return await classification_pipe(resolve_pdf_path(inputs.pdf_path), use_rag=False)
 
 async def extract_case(inputs: ExtractionInput) -> BaseModel:
     from pydantic_ai_document_processing.agent import extraction_agent_schema
@@ -57,13 +70,25 @@ async def run_evaluations(
     if kind in ("all", "classification"):
         path = cases_dir / "classification.yaml"
         dataset = _maybe_limit(load_classification_dataset(path), limit)
-        report = await dataset.evaluate(
+
+        rag_report = await dataset.evaluate(
             classify_case,
             name=dataset.name,
+            metadata={"use_rag": True},
             max_concurrency=max_concurrency,
         )
-        print_evaluation_report(report, include_reasons=include_reasons)
-        reports.append(report)
+        print_evaluation_report(rag_report, include_reasons=include_reasons)
+        reports.append(rag_report)
+
+        # classification without RAG
+        no_rag_report = await dataset.evaluate(
+            classify_case_no_rag,
+            name=dataset.name,
+            metadata={"use_rag": False},
+            max_concurrency=max_concurrency,
+        )
+        print_evaluation_report(no_rag_report, include_reasons=include_reasons)
+        reports.append(no_rag_report)
 
     if kind in ("all", "extraction"):
         from pydantic_ai_document_processing.agent import extraction_agent_schema
@@ -151,7 +176,7 @@ def main(argv: list[str] | None = None) -> None:
     import asyncio
 
     args = build_arg_parser().parse_args(argv)
-    asyncio.run(
+    reports = asyncio.run(
         run_evaluations(
             cases_dir=args.cases_dir,
             kind=args.only,
@@ -162,6 +187,10 @@ def main(argv: list[str] | None = None) -> None:
         )
     )
 
+    # save the reports to a file with the current date and time
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    with open(f"reports_{timestamp}.json", "w") as f:
+        json.dump(reports, f, indent=4)
 
 if __name__ == "__main__":
     main()
